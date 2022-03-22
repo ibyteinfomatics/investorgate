@@ -5,7 +5,8 @@ import { elastic as Menu } from 'react-burger-menu';
 // import React, { useEffect } from "react";
 // import { ReactDOM } from "react";
 import Link from 'next/link';
-import $ from 'jquery'
+import $ from 'jquery';
+import Image from 'next/image';
 import React, { Fragment, useEffect } from "react";
 export default function Header(){
 
@@ -75,7 +76,7 @@ export default function Header(){
                     <div className="header__left">
                         <div className="site__logo">
                             <Link className="logo__link"  href="/">
-                                <img src="/images/IG-Logo.png" alt="Invertor Gate" />
+                                <Image src="/images/IG-Logo.png" alt="Invertor Gate" width="240" height="80" />
                             </Link>
                         </div>
                     </div>
@@ -152,7 +153,7 @@ export default function Header(){
                         </Menu>
                         <div className="site__logo">
                             <Link className="logo__link"  href="/">
-                                <img src="/images/IG-Logo.png" alt="Invertor Gate" />
+                                <Image src="/images/IG-Logo.png" alt="Invertor Gate" width="80" height="35" />
                             </Link>
                         </div>
                     </div>
