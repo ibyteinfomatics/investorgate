@@ -180,6 +180,9 @@ nav.site__navigation {
 	}
 }
 /*===== Banner styling =====*/
+.style--banner{
+  @apply px-5;
+}
 .style--banner, .subscribe__bg{
   @apply relative bg-no-repeat;
 }
@@ -201,8 +204,7 @@ nav.site__navigation {
   background-image: url(/images/exclusive--banner.jpg);
 }
 .banner__wrapper{
-  @apply px-5 site__width main__grid relative;
-  padding-top: 1.25em;
+  @apply pt-5 site__width main__grid relative;
   padding-bottom: 3%;
 }
 .banner__content{
@@ -238,13 +240,11 @@ nav.site__navigation {
 
 /* Sections styling */
 .section{
+  @apply p-5;
   margin: 3.125rem 0;
 }
 .section.has--bg{
   margin: 0;
-}
-.section__wrapper{
-  @apply p-5;
 }
 .section--hgroup{
   @apply mb-5;
