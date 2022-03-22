@@ -48,7 +48,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className='banner__right--image'>
-                        <img src="/images/ipad3.png" alt="Home banner" width="318" height="414" />
+                        <Image src="/images/ipad3.png" alt="Home banner" width="318" height="414" />
                     </div>
                 </div>
                 <Logoslider />
@@ -232,7 +232,7 @@ export default function Home() {
                         <div className='infographic__list--item'>
                             <div className='infographic__header'>
                                 <div className='infographic__icon'>
-                                    <Image src="/images/message-icon.svg" width="64" height="64" />
+                                    <Image src="/images/message-icon.svg" alt="message icon" width="64" height="64" />
                                 </div>
                                 <div className='infographic__title'>
                                     <h3>InvestorGate-Led Interviews</h3>
@@ -246,7 +246,7 @@ export default function Home() {
                         <div className='infographic__list--item'>
                             <div className='infographic__header'>
                                 <div className='infographic__icon'>
-                                    <Image src="/images/multi-message-icon.svg" width="64" height="64" />
+                                    <Image src="/images/multi-message-icon.svg" alt="multi message icon" width="64" height="64" />
                                 </div>
                                 <div className='infographic__title'>
                                     <h3>Investor-Led Interviews</h3>
@@ -260,7 +260,7 @@ export default function Home() {
                         <div className='infographic__list--item'>
                             <div className='infographic__header'>
                                 <div className='infographic__icon'>
-                                    <Image src="/images/share-icon.svg" width="64" height="64" />
+                                    <Image src="/images/share-icon.svg" alt="share icon" width="64" height="64" />
                                 </div>
                                 <div className='infographic__title'>
                                     <h3>Industry Panel Interviews</h3>
@@ -274,7 +274,7 @@ export default function Home() {
                         <div className='infographic__list--item'>
                             <div className='infographic__header'>
                                 <div className='infographic__icon'>
-                                    <Image src="/images/analysis-icon.svg" width="64" height="64" />
+                                    <Image src="/images/analysis-icon.svg" alt="analysis icon" width="64" height="64" />
                                 </div>
                                 <div className='infographic__title'>
                                     <h3>Post-Interview Analysis</h3>

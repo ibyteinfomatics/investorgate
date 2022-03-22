@@ -75,8 +75,10 @@ export default function Header(){
                 <div className="header__wrap--inner">
                     <div className="header__left">
                         <div className="site__logo">
-                            <Link className="logo__link"  href="/">
-                                <Image src="/images/IG-Logo.png" alt="Invertor Gate" width="240" height="80" />
+                            <Link href="/">
+                                <a className="logo__link">
+                                    <Image src="/images/IG-Logo.png" alt="Invertor Gate" width="240" height="80" />
+                                </a>
                             </Link>
                         </div>
                     </div>
@@ -152,8 +154,10 @@ export default function Header(){
                             </div>
                         </Menu>
                         <div className="site__logo">
-                            <Link className="logo__link"  href="/">
-                                <Image src="/images/IG-Logo.png" alt="Invertor Gate" width="80" height="35" />
+                            <Link href="/">
+                                <a className="logo__link">
+                                    <Image src="/images/IG-Logo.png" alt="Invertor Gate" width="80" height="35" />
+                                </a>
                             </Link>
                         </div>
                     </div>
