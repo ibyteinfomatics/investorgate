@@ -1,24 +1,36 @@
-import React from 'react';
+
 import Link from 'next/link';
 import Header from '../Header/Header';
 import Logoslider from '../Logoslider/Logoslider';
 import Footer from '../Footer/Footer';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import {
     faLongArrowRight,
     faMessage,
     faShareAlt,
     faComments,
     faLineChart,
-  } from "@fortawesome/free-solid-svg-icons";
+} from "@fortawesome/free-solid-svg-icons";
+import Head from 'next/head';
 
-export default function Home () {
-    return(
+export default function Home() {
+    useEffect(() => {
+        AOS.init({
+            easing: "ease-out-cubic",
+            once: true,
+            offset: 50,
+            duration: 1200,
+          });
+        },[]);
+    return (
         <React.Fragment>
             <Header />
 
             {/* Top Banner */}
-            <div className='style--banner banner--style-1' data-aos="fade-up">
+            <div className='style--banner banner--style-1 cursor__ball cursor__ball--big' data-aos="fade-up">
                 <div className='banner__wrapper'>
                     <div className='banner__content'>
                         <div className='banner__hgroup hgroup'>
@@ -44,7 +56,7 @@ export default function Home () {
 
             {/* Featured interviews */}
             <div className='feed--section section' data-aos="fade-up">
-                <div className='section__wrapper site__width'> 
+                <div className='section__wrapper site__width'>
                     <div className='section--hgroup hgroup'>
                         <div className='subtitle section--subtitle'>
                             <h3>Exclusive Content</h3>
@@ -53,7 +65,7 @@ export default function Home () {
                             <p>Featured articles</p>
                         </div>
                     </div>
-                    
+
                     <div className='feed--lists'>
                         <div className='feed--items'>
                             <div className='feed--items--wrapper'>
@@ -68,14 +80,14 @@ export default function Home () {
                                     <div className='feed--hgroup'>
                                         <div className='feed--logo'>
                                             <img src='images/IG-User-Logo.png' alt='Logo' />
-                                        </div>                                
+                                        </div>
                                         <div className="feed--meta--text">
                                             <p className="meta--author">Posted by <strong>Investorgate</strong></p>
                                             <p className="meta--date">February 26, 2022</p>
                                         </div>
                                     </div>
                                     <div className='feed--text--wrap'>
-                                        <div className="feed--category">                 
+                                        <div className="feed--category">
                                             <Link href='https://coacherly.com/category/analysis/'>
                                                 <a className="category">Analysis, </a>
                                             </Link>
@@ -93,7 +105,7 @@ export default function Home () {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className='feed--items'>
                             <div className='feed--items--wrapper'>
                                 <div className='feed--item--image'>
@@ -107,14 +119,14 @@ export default function Home () {
                                     <div className='feed--hgroup'>
                                         <div className='feed--logo'>
                                             <img src='images/IG-User-Logo.png' alt='Logo' />
-                                        </div>                                
+                                        </div>
                                         <div className="feed--meta--text">
                                             <p className="meta--author">Posted by <strong>Investorgate</strong></p>
                                             <p className="meta--date">February 26, 2022</p>
                                         </div>
                                     </div>
                                     <div className='feed--text--wrap'>
-                                        <div className="feed--category">                 
+                                        <div className="feed--category">
                                             <Link href='https://coacherly.com/category/company-coverage/'>
                                                 <a className="category">Company Coverage, </a>
                                             </Link>
@@ -132,7 +144,7 @@ export default function Home () {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className='feed--items'>
                             <div className='feed--items--wrapper'>
                                 <div className='feed--item--image'>
@@ -146,14 +158,14 @@ export default function Home () {
                                     <div className='feed--hgroup'>
                                         <div className='feed--logo'>
                                             <img src='images/IG-User-Logo.png' alt='Logo' />
-                                        </div>                                
+                                        </div>
                                         <div className="feed--meta--text">
                                             <p className="meta--author">Posted by <strong>Investorgate</strong></p>
                                             <p className="meta--date">February 26, 2022</p>
                                         </div>
                                     </div>
                                     <div className='feed--text--wrap'>
-                                        <div className="feed--category">                   
+                                        <div className="feed--category">
                                             <Link href='https://coacherly.com/category/expert-networks/'>
                                                 <a className="category">Expert networks, </a>
                                             </Link>
@@ -192,7 +204,7 @@ export default function Home () {
                             <p>InvestorGate’s purpose is to improve access to primary research and drive better investment decisions. That means giving you faster access to experts, more relevant insights, better idea generation and high-conviction investment theses.</p>
                             <p>Our company coverage is designed for the needs of our clients: fundamental investors with long time horizons and business ownership mindsets. Discover why some of the leading fund managers, research houses, retail investors and business schools use our platform for their primary research.</p>
                             <div className='banner__btn btn red--button'>
-                            <Link href="#"><a><span>Learn More</span> <FontAwesomeIcon icon={faLongArrowRight} /></a></Link>
+                                <Link href="#"><a><span>Learn More</span> <FontAwesomeIcon icon={faLongArrowRight} /></a></Link>
                             </div>
                         </div>
                     </div>
@@ -219,7 +231,7 @@ export default function Home () {
                         <div className='infographic__list--item'>
                             <div className='infographic__header'>
                                 <div className='infographic__icon'>
-                                    <FontAwesomeIcon icon={faMessage} />
+                                    <img src="images/message-icon.svg" />
                                 </div>
                                 <div className='infographic__title'>
                                     <h3>InvestorGate-Led Interviews</h3>
@@ -229,11 +241,11 @@ export default function Home () {
                                 <p>InvestorGate Analysts host and publish interviews directly with executives.</p>
                             </div>
                         </div>
-                        
+
                         <div className='infographic__list--item'>
                             <div className='infographic__header'>
                                 <div className='infographic__icon'>
-                                    <FontAwesomeIcon icon={faComments} />
+                                    <img src="images/multi-message-icon.svg" />
                                 </div>
                                 <div className='infographic__title'>
                                     <h3>Investor-Led Interviews</h3>
@@ -242,12 +254,12 @@ export default function Home () {
                             <div className='infographic__content'>
                                 <p>InvestorGate investment partners conduct interviews with experts and share with the community.</p>
                             </div>
-                        </div>                        
-                        
+                        </div>
+
                         <div className='infographic__list--item'>
                             <div className='infographic__header'>
                                 <div className='infographic__icon'>
-                                    <FontAwesomeIcon icon={faShareAlt} />
+                                    <img src="images/share-icon.svg" />
                                 </div>
                                 <div className='infographic__title'>
                                     <h3>Industry Panel Interviews</h3>
@@ -256,12 +268,12 @@ export default function Home () {
                             <div className='infographic__content'>
                                 <p>Panel of executives and industry experts hosted by an InvestorGate Analyst for broader discussion.</p>
                             </div>
-                        </div>                        
-                        
+                        </div>
+
                         <div className='infographic__list--item'>
                             <div className='infographic__header'>
                                 <div className='infographic__icon'>
-                                    <FontAwesomeIcon icon={faLineChart} />
+                                    <img src="images/analysis-icon.svg" />
                                 </div>
                                 <div className='infographic__title'>
                                     <h3>Post-Interview Analysis</h3>
@@ -292,7 +304,7 @@ export default function Home () {
                             <p>We partner with experts like you for knowledge-sharing and networking opportunities.</p>
                             <p>If you’re an executive interested in building your profile, sharing your knowledge, and joining a fast-growing expert network, apply today to become part of our community.</p>
                             <div className='btn red--button'>
-                            <Link href="#"><a><span>Join Now</span> <FontAwesomeIcon icon={faLongArrowRight} /></a></Link>
+                                <Link href="#"><a><span>Join Now</span> <FontAwesomeIcon icon={faLongArrowRight} /></a></Link>
                             </div>
                         </div>
                     </div>

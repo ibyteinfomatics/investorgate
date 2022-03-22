@@ -97,13 +97,9 @@ export default function Footer() {
                     </div>
                     <div className="site-info-holder ">
                         <div className="left">© 2022, InvestorGate LTD. Company no:
-                            <a href="https://find-and-update.company-information.service.gov.uk/company/12913657" target="_blank">12913657</a> | Designed By <a href="https://dotcoms.co.uk" target="_blank">DotComs</a>
+                            <Link href="https://find-and-update.company-information.service.gov.uk/company/12913657" target="_blank"><a>12913657</a></Link> | Designed By <Link href="https://dotcoms.co.uk" target="_blank"><a>DotComs</a></Link>
                             <br />
-                            <a href="https://coacherly.com/privacy-policy/">Privacy &amp; Cookie Policy</a> |
-                            <a href="https://coacherly.com/terms-conditions/">Terms of Service</a> |
-                            <a href="https://coacherly.com/executive-terms-of-engagement/">Executive Terms of Engagement</a> |
-                            <a href="https://coacherly.com/compliance-policy-and-process/">Compliance Policy &amp; Process</a>								</div>
-                        <div className="right">
+                            <Link href="https://coacherly.com/privacy-policy/"><a>Privacy &amp; Cookie Policy</a></Link> | <Link href="https://coacherly.com/terms-conditions/"><a>Terms of Service</a></Link> | <Link href="https://coacherly.com/executive-terms-of-engagement/"><a>Executive Terms of Engagement</a></Link> | <Link href="https://coacherly.com/compliance-policy-and-process/"><a>Compliance Policy &amp; Process</a></Link>
                         </div>
                     </div>
                 </div>

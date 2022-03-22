@@ -13,6 +13,8 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.0",
     "@fortawesome/react-fontawesome": "^0.1.18",
     "aos": "^3.0.0-beta.6",
+    "jQuery": "^1.7.4",
+    "jquery": "^3.6.0",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-burger-menu": "^3.0.6",

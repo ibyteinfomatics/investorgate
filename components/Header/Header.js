@@ -1,31 +1,72 @@
 import Head from "next/head";
-import Link from "next/link";
+// import Link from "next/link";
 import { elastic as Menu } from 'react-burger-menu';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 // import $ from 'jquery';
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
+// import { ReactDOM } from "react";
+import Link from 'next/link';
+import $ from 'jquery'
+import React, { Fragment, useEffect } from "react";
 export default function Header(){
 
     useEffect(() => {
-        AOS.init({
-          easing: "ease-out-cubic",
-          once: true,
-          offset: 50,
-          duration: 1200,
+        $(document).ready(function () {
+          $(window).scroll(function () {
+            if ($(document).scrollTop() > 150) {
+              $(".desktop__header").addClass("scrollSticky");
+            } else {
+              $(".desktop__header").removeClass("scrollSticky");
+            }
+            if ($(document).scrollTop() > 300) {
+              $(".desktop__header").addClass("addScroll");
+            } else {
+              $(".desktop__header").removeClass("addScroll");
+            }
+          });
+
+          var cursor = $(".cursor");
+
+        $(window).mousemove(function(e) {
+            cursor.css({
+                top: e.clientY - cursor.height() / 2,
+                left: e.clientX - cursor.width() / 2
+            });
+        });
+
+        $(window)
+            .mouseleave(function() {
+                cursor.css({
+                    opacity: "0"
+                });
+            })
+            .mouseenter(function() {
+                cursor.css({
+                    opacity: "1"
+                });
+            });
+
+        $("a")
+            .mouseenter(function() {
+                cursor.addClass("cursor--link");
+            })
+            .mouseleave(function() {
+                cursor.removeClass("cursor--link");
+            });
+
+        $(window)
+            .mousedown(function() {
+                cursor.css({
+                    transform: "scale(.2)"
+                });
+            })
+            .mouseup(function() {
+                cursor.css({
+                    transform: "scale(1)"
+                });
+            });
+
         });
       }, []);
-    // useEffect(() => {
-    //     $(document).ready(function () {
-    //       $(window).scroll(function () {
-    //         if ($(document).scrollTop() > 5) {
-    //           $("body").addClass("addScroll");
-    //         } else {
-    //           $("body").removeClass("addScroll");
-    //         }
-    //       });
-    //     });
-    //   },);
     return(
         <React.Fragment>
             <Head>
@@ -33,6 +74,7 @@ export default function Header(){
                 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
+            <div class="cursor"></div>
             <div className="desktop__header header__wrapper">
                 <div className="header__wrap--inner">
                     <div className="header__left">
@@ -110,7 +152,7 @@ export default function Header(){
                                 </li>
                             </ul>
                             <div className="copyright">
-                                © 2022, InvestorGate LTD. Company no: <a href="https://find-and-update.company-information.service.gov.uk/company/12913657" target="_blank">12913657</a> | Designed By <a href="https://dotcoms.co.uk" target="_blank">DotComs</a><br /><a href="https://coacherly.com/privacy-policy/">Privacy &amp; Cookie Policy</a> | <a href="https://coacherly.com/terms-conditions/">Terms of Service</a> | <a href="https://coacherly.com/executive-terms-of-engagement/">Executive Terms of Engagement</a> | <a href="https://coacherly.com/compliance-policy-and-process/">Compliance Policy &amp; Process</a> 
+                                © 2022, InvestorGate LTD. Company no: <Link href="https://find-and-update.company-information.service.gov.uk/company/12913657" target="_blank">12913657</Link> | Designed By <Link href="https://dotcoms.co.uk" target="_blank">DotComs</Link><br /><Link href="https://coacherly.com/privacy-policy/">Privacy &amp; Cookie Policy</Link> | <Link href="https://coacherly.com/terms-conditions/">Terms of Service</Link> | <Link href="https://coacherly.com/executive-terms-of-engagement/">Executive Terms of Engagement</Link> | <Link href="https://coacherly.com/compliance-policy-and-process/">Compliance Policy &amp; Process</Link> 
                             </div>
                         </Menu>
                         <div className="site__logo">
