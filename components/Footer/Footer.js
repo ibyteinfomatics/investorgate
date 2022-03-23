@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Footer() {
     return (
         <React.Fragment>
-            <div className='siteFooter sectionWrapper'>
+            <div className='siteFooter section has--bg'>
                 <div className='section__wrapper site__width'>
                     <div className='divideFooter'>
                         <div className='footerCol'>

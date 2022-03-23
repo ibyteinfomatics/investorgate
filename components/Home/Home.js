@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import Header from '../Header/Header';
 import Logoslider from '../Logoslider/Logoslider';
@@ -10,12 +9,12 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {
     faLongArrowRight,
-    faMessage,
-    faShareAlt,
-    faComments,
-    faLineChart,
 } from "@fortawesome/free-solid-svg-icons";
-import Head from 'next/head';
+
+import Sitebanner from '../Sitebanner/Sitebanner';
+import FeedItems from '../Feeds/FeedItems';
+import InfographicList from '../Servcies/ServciesList';
+
 
 export default function Home() {
     useEffect(() => {
@@ -31,26 +30,14 @@ export default function Home() {
             <Header />
 
             {/* Top Banner */}
-            <div className='style--banner banner--style-1 cursor__ball cursor__ball--big' data-aos="fade-up">
-                <div className='banner__wrapper'>
-                    <div className='banner__content'>
-                        <div className='banner__hgroup hgroup'>
-                            <div className='banner__title title'>
-                                <h3>Qualitative insights on high-quality companies. Directly from executives.</h3>
-                            </div>
-                        </div>
-                        <div className='banner__text'>
-                            <p>As a leading provider of primary research, InvestorGate brings you interviews with executives from high-quality, public companies. We’re a trusted source of qualitative insights for investors and research professionals globally.</p>
-                            <p>For updates on all the latest interviews and analysis, subscribe to our newslette</p>
-                            <div className='banner__btn btn red--button'>
-                                <Link href="#"><a><span>Subscribe</span> <FontAwesomeIcon icon={faLongArrowRight} /></a></Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='banner__right--image'>
-                        <Image src="/images/ipad3.png" alt="Home banner" width="318" height="414" />
-                    </div>
-                </div>
+            <div className='style--banner banner--style-1' data-aos="fade-up">
+                <Sitebanner 
+                    bannerTitle="Qualitative insights on high-quality companies. Directly from executives."
+                    bannerText1="As a leading provider of primary research, InvestorGate brings you interviews with executives from high-quality, public companies. We’re a trusted source of qualitative insights for investors and research professionals globally."
+                    bannerText2="For updates on all the latest interviews and analysis, subscribe to our newslette"
+                    bannerImage="/images/ipad3.png"
+                    bannerButton="Subscribe"
+                />
                 <Logoslider />
             </div>
 
@@ -68,123 +55,49 @@ export default function Home() {
                     </div>
 
                     <div className='feed--lists'>
-                        <div className='feed--items'>
-                            <div className='feed--items--wrapper'>
-                                <div className='feed--item--image'>
-                                    <Link href='#'>
-                                        <a>
-                                            <Image src='/images/FI-1-1.jpg' alt='BlogImg' width="1244" height="410" />
-                                        </a>
-                                    </Link>
-                                </div>
-                                <div className='feed--item--content'>
-                                    <div className='feed--hgroup'>
-                                        <div className='feed--logo'>
-                                            <Image src='/images/IG-User-Logo.png' alt='Logo' width="48" height="48" />
-                                        </div>
-                                        <div className="feed--meta--text">
-                                            <p className="meta--author">Posted by <strong>Investorgate</strong></p>
-                                            <p className="meta--date">February 26, 2022</p>
-                                        </div>
-                                    </div>
-                                    <div className='feed--text--wrap'>
-                                        <div className="feed--category">
-                                            <Link href='https://coacherly.com/category/analysis/'>
-                                                <a className="category">Analysis, </a>
-                                            </Link>
-                                            <Link href='https://coacherly.com/category/freemium/'>
-                                                <a className="category">Freemium.</a>
-                                            </Link>
-                                        </div>
-                                        <div className='feed--text'>
-                                            <h3 className="text--headline">
-                                                <Link href="https://coacherly.com/analysis-constellation-vitec-and-vmss-impeccable-match-for-serial-acquirers/">Analysis: Constellation, Vitec, and VMS’s Impeccable Match for Serial Acquirers</Link>
-                                            </h3>
-                                            <p className="text--content">Mark Leonard, the CEO of Constellation Software, famously...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <FeedItems 
+                            blogImg="/images/FI-1-1.jpg"
+                            feedLogo="/images/IG-User-Logo.png"
+                            authorName="Investorgate"
+                            feedDate="February 26, 2022"
+                            cate1Link="https://coacherly.com/category/analysis/"
+                            cate1="Analysis"
+                            cate2Link="https://coacherly.com/category/freemium/"
+                            cate2="Freemium"
+                            headlineLink="https://coacherly.com/analysis-constellation-vitec-and-vmss-impeccable-match-for-serial-acquirers/"
+                            headline="Analysis: Constellation, Vitec, and VMS’s Impeccable Match for Serial Acquirers"
+                            feedText="Mark Leonard, the CEO of Constellation Software, famously..."
+                        />
 
-                        <div className='feed--items'>
-                            <div className='feed--items--wrapper'>
-                                <div className='feed--item--image'>
-                                    <Link href='#'>
-                                        <a>
-                                            <Image src='/images/FI-2-1.jpg' alt='BlogImg' width="1244" height="410" />
-                                        </a>
-                                    </Link>
-                                </div>
-                                <div className='feed--item--content'>
-                                    <div className='feed--hgroup'>
-                                        <div className='feed--logo'>
-                                            <Image src='/images/IG-User-Logo.png' alt='Logo' width="48" height="48" />
-                                        </div>
-                                        <div className="feed--meta--text">
-                                            <p className="meta--author">Posted by <strong>Investorgate</strong></p>
-                                            <p className="meta--date">February 26, 2022</p>
-                                        </div>
-                                    </div>
-                                    <div className='feed--text--wrap'>
-                                        <div className="feed--category">
-                                            <Link href='https://coacherly.com/category/company-coverage/'>
-                                                <a className="category">Company Coverage, </a>
-                                            </Link>
-                                            <Link href='https://coacherly.com/category/freemium/'>
-                                                <a className="category">Freemium.</a>
-                                            </Link>
-                                        </div>
-                                        <div className='feed--text'>
-                                            <h3 className="text--headline">
-                                                <Link href="https://coacherly.com/couche-tard-the-impact-of-electric-vehicles/">Expert Networks: What’s next for the industry?</Link>
-                                            </h3>
-                                            <p className="text--content">Our company coverage focuses squarely on high-quality companies...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <FeedItems 
+                            blogImg="/images/FI-2-1.jpg"
+                            feedLogo="/images/IG-User-Logo.png"
+                            authorName="Investorgate"
+                            feedDate="February 26, 2022"
+                            cate1Link="https://coacherly.com/category/company-coverage/"
+                            cate1="Company Coverage"
+                            cate2Link="https://coacherly.com/category/freemium/"
+                            cate2="Freemium"
+                            headlineLink="https://coacherly.com/company-coverage-what-type-of-companies-make-the-cut/"
+                            headline="Company Coverage: What type of companies make the cut?"
+                            feedText="Our company coverage focuses squarely on high-quality companies..."
+                        />
 
-                        <div className='feed--items'>
-                            <div className='feed--items--wrapper'>
-                                <div className='feed--item--image'>
-                                    <Link href='#'>
-                                        <a>
-                                            <Image src='/images/FI-3-1.jpg' alt='BlogImg' width="1244" height="410" />
-                                        </a>
-                                    </Link>
-                                </div>
-                                <div className='feed--item--content'>
-                                    <div className='feed--hgroup'>
-                                        <div className='feed--logo'>
-                                            <Image src='/images/IG-User-Logo.png' alt='Logo' width="48" height="48" />
-                                        </div>
-                                        <div className="feed--meta--text">
-                                            <p className="meta--author">Posted by <strong>Investorgate</strong></p>
-                                            <p className="meta--date">February 26, 2022</p>
-                                        </div>
-                                    </div>
-                                    <div className='feed--text--wrap'>
-                                        <div className="feed--category">
-                                            <Link href='https://coacherly.com/category/expert-networks/'>
-                                                <a className="category">Expert networks, </a>
-                                            </Link>
-                                            <Link href='https://coacherly.com/category/freemium/'>
-                                                <a className="category">Freemium.</a>
-                                            </Link>
-                                        </div>
-                                        <div className='feed--text'>
-                                            <h3 className="text--headline">
-                                                <Link href="https://coacherly.com/couche-tard-the-impact-of-electric-vehicles/">Expert Networks: What’s next for the industry?</Link>
-                                            </h3>
-                                            <p className="text--content">I’ve always worked for media agencies, across my...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <FeedItems 
+                            blogImg="/images/FI-3-1.jpg"
+                            feedLogo="/images/IG-User-Logo.png"
+                            authorName="Investorgate"
+                            feedDate="February 26, 2022"
+                            cate1Link="https://coacherly.com/category/expert-networks/"
+                            cate1="Expert networks"
+                            cate2Link="https://coacherly.com/category/freemium/"
+                            cate2="Freemium"
+                            headlineLink="https://coacherly.com/couche-tard-the-impact-of-electric-vehicles/"
+                            headline="Expert Networks: What’s next for the industry?"
+                            feedText="I’ve always worked for media agencies, across my..."
+                        />
                     </div>
+                    
                 </div>
             </div>
 
@@ -228,62 +141,30 @@ export default function Home() {
                         <p>We organise and produce interviews with company executives to gain insights on the strategies, operating models, economic and cultural characteristics of high-quality companies.</p>
                         <p>Our primary research focuses on public companies listed on the major world stock markets with a tendency towards global mid-caps. We publish content in four formats:</p>
                     </div>
-                    <div className='infographic__list'>
-                        <div className='infographic__list--item'>
-                            <div className='infographic__header'>
-                                <div className='infographic__icon'>
-                                    <Image src="/images/message-icon.svg" alt="message icon" width="64" height="64" />
-                                </div>
-                                <div className='infographic__title'>
-                                    <h3>InvestorGate-Led Interviews</h3>
-                                </div>
-                            </div>
-                            <div className='infographic__content'>
-                                <p>InvestorGate Analysts host and publish interviews directly with executives.</p>
-                            </div>
-                        </div>
+                    <div className='infographic__list' data-aos="fade-up" data-aos-duration="2000">
+                        <InfographicList 
+                            infoIcon="/images/message-icon.svg"
+                            infoTitle="InvestorGate-Led Interviews"
+                            infoContent="InvestorGate Analysts host and publish interviews directly with executives."
+                        />
 
-                        <div className='infographic__list--item'>
-                            <div className='infographic__header'>
-                                <div className='infographic__icon'>
-                                    <Image src="/images/multi-message-icon.svg" alt="multi message icon" width="64" height="64" />
-                                </div>
-                                <div className='infographic__title'>
-                                    <h3>Investor-Led Interviews</h3>
-                                </div>
-                            </div>
-                            <div className='infographic__content'>
-                                <p>InvestorGate investment partners conduct interviews with experts and share with the community.</p>
-                            </div>
-                        </div>
+                        <InfographicList 
+                            infoIcon="/images/multi-message-icon.svg"
+                            infoTitle="Investor-Led Interviews"
+                            infoContent="InvestorGate investment partners conduct interviews with experts and share with the community."
+                        />
 
-                        <div className='infographic__list--item'>
-                            <div className='infographic__header'>
-                                <div className='infographic__icon'>
-                                    <Image src="/images/share-icon.svg" alt="share icon" width="64" height="64" />
-                                </div>
-                                <div className='infographic__title'>
-                                    <h3>Industry Panel Interviews</h3>
-                                </div>
-                            </div>
-                            <div className='infographic__content'>
-                                <p>Panel of executives and industry experts hosted by an InvestorGate Analyst for broader discussion.</p>
-                            </div>
-                        </div>
+                        <InfographicList 
+                            infoIcon="/images/share-icon.svg"
+                            infoTitle="Industry Panel Interviews"
+                            infoContent="Panel of executives and industry experts hosted by an InvestorGate Analyst for broader discussion."
+                        />
 
-                        <div className='infographic__list--item'>
-                            <div className='infographic__header'>
-                                <div className='infographic__icon'>
-                                    <Image src="/images/analysis-icon.svg" alt="analysis icon" width="64" height="64" />
-                                </div>
-                                <div className='infographic__title'>
-                                    <h3>Post-Interview Analysis</h3>
-                                </div>
-                            </div>
-                            <div className='infographic__content'>
-                                <p>InvestorGate analysis report combining insights & perspectives from our various content features.</p>
-                            </div>
-                        </div>
+                        <InfographicList 
+                            infoIcon="/images/analysis-icon.svg"
+                            infoTitle="Post-Interview Analysis"
+                            infoContent="InvestorGate analysis report combining insights & perspectives from our various content features."
+                        />
                     </div>
                 </div>
             </div>

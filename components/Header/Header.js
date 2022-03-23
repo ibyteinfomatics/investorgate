@@ -8,6 +8,7 @@ import Link from 'next/link';
 import $ from 'jquery';
 import Image from 'next/image';
 import React, { Fragment, useEffect } from "react";
+import { useRouter } from "next/router";
 export default function Header(){
 
     useEffect(() => {
@@ -68,6 +69,9 @@ export default function Header(){
 
         });
       }, []);
+
+      const router = useRouter();
+
     return(
         <React.Fragment>
             <div className="cursor"></div>
@@ -86,22 +90,34 @@ export default function Header(){
                         <nav className="site__navigation">
                             <ul>
                                 <li>
-                                    <Link href="/">Home</Link>
+                                    <Link href="/">
+                                        <a className={router.pathname == "/" ? "active" : ""}>Home</a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <Link href="/">Services</Link>
+                                    <Link href="/servcies">
+                                        <a className={router.pathname == "/servcies" ? "active" : ""}>Services</a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <Link href="/">Interviews</Link>
+                                    <Link href="/">
+                                        <a className={router.pathname == "/interviews" ? "active" : ""}>Interviews</a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <Link href="/">For Executives</Link>
+                                    <Link href="/executives">
+                                        <a className={router.pathname == "/executives" ? "active" : ""}>For Executives</a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <Link href="/">Blog</Link>
+                                    <Link href="/">
+                                        <a className={router.pathname == "/blog" ? "active" : ""}>Blog</a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <Link href="/">Contact</Link>
+                                    <Link href="/contact">
+                                        <a className={router.pathname == "/contact" ? "active" : ""}>Contact</a>
+                                    </Link>
                                 </li>
                             </ul>
                             <div className="subscribe__btn btn">
@@ -119,33 +135,33 @@ export default function Header(){
                         <Menu left>
                             <ul>
                                 <li>
-                                    <Link href="#">
-                                        <a className='active'>Home</a>
+                                    <Link href="/">
+                                        <a className={router.pathname == "/" ? "active" : ""}>Home</a>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#">
-                                        <a>Servcies</a>
+                                    <Link href="/servcies">
+                                        <a className={router.pathname == "/servcies" ? "active" : ""}>Services</a>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#">
-                                        <a>Interviews</a>
+                                    <Link href="/">
+                                        <a className={router.pathname == "/interviews" ? "active" : ""}>Interviews</a>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="For Executives">
-                                        <a>For Executives</a>
+                                    <Link href="/executives">
+                                        <a className={router.pathname == "/executives" ? "active" : ""}>For Executives</a>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#">
-                                        <a>Blog</a>
+                                    <Link href="/">
+                                        <a className={router.pathname == "/blog" ? "active" : ""}>Blog</a>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#">
-                                        <a>Contact</a>
+                                    <Link href="/contact">
+                                        <a className={router.pathname == "/contact" ? "active" : ""}>Contact</a>
                                     </Link>
                                 </li>
                             </ul>
@@ -156,7 +172,7 @@ export default function Header(){
                         <div className="site__logo">
                             <Link href="/">
                                 <a className="logo__link">
-                                    <Image src="/images/IG-Logo.png" alt="Invertor Gate" width="80" height="35" />
+                                    <Image src="/images/IG-Logo.png" alt="Invertor Gate" width="160" height="50" />
                                 </a>
                             </Link>
                         </div>
