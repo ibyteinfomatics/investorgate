@@ -5,7 +5,8 @@ import { elastic as Menu } from 'react-burger-menu';
 // import React, { useEffect } from "react";
 // import { ReactDOM } from "react";
 import Link from 'next/link';
-import $ from 'jquery'
+import $ from 'jquery';
+import Image from 'next/image';
 import React, { Fragment, useEffect } from "react";
 export default function Header(){
 
@@ -69,18 +70,15 @@ export default function Header(){
       }, []);
     return(
         <React.Fragment>
-            <Head>
-                <title>Investor Gate</title>
-                <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            </Head>
-            <div class="cursor"></div>
+            <div className="cursor"></div>
             <div className="desktop__header header__wrapper">
                 <div className="header__wrap--inner">
                     <div className="header__left">
                         <div className="site__logo">
-                            <Link className="logo__link"  href="/">
-                                <img src="/images/IG-Logo.png" alt="Invertor Gate" />
+                            <Link href="/">
+                                <a className="logo__link">
+                                    <Image src="/images/IG-Logo.png" alt="Invertor Gate" width="240" height="80" />
+                                </a>
                             </Link>
                         </div>
                     </div>
@@ -156,8 +154,10 @@ export default function Header(){
                             </div>
                         </Menu>
                         <div className="site__logo">
-                            <Link className="logo__link"  href="/">
-                                <img src="/images/IG-Logo.png" alt="Invertor Gate" />
+                            <Link href="/">
+                                <a className="logo__link">
+                                    <Image src="/images/IG-Logo.png" alt="Invertor Gate" width="80" height="35" />
+                                </a>
                             </Link>
                         </div>
                     </div>
