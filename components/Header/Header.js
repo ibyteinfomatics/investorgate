@@ -69,12 +69,7 @@ export default function Header(){
       }, []);
     return(
         <React.Fragment>
-            <Head>
-                <title>Investor Gate</title>
-                <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            </Head>
-            <div class="cursor"></div>
+            <div className="cursor"></div>
             <div className="desktop__header header__wrapper">
                 <div className="header__wrap--inner">
                     <div className="header__left">

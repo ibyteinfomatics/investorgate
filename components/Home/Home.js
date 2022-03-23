@@ -300,7 +300,7 @@ export default function Home() {
                                 <p>Your expertise travels further than you</p>
                             </div>
                         </div>
-                        <div class="section--content">
+                        <div className="section--content">
                             <p>We partner with experts like you for knowledge-sharing and networking opportunities.</p>
                             <p>If you’re an executive interested in building your profile, sharing your knowledge, and joining a fast-growing expert network, apply today to become part of our community.</p>
                             <div className='btn red--button'>
