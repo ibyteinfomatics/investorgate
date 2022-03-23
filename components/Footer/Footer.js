@@ -1,5 +1,6 @@
-import Link from 'next/dist/client/link'
-import React from 'react'
+import Link from 'next/dist/client/link';
+import React from 'react';
+import Image from 'next/image';
 
 export default function Footer() {
     return (
@@ -9,7 +10,7 @@ export default function Footer() {
                     <div className='divideFooter'>
                         <div className='footerCol'>
                             <div className='footerLogo'>
-                                <img src='/images/IG-Footer-Logo.png' alt='Footer Logo' />
+                                <Image src='/images/IG-Footer-Logo.png' alt='Footer Logo' width="240" height="44" />
                             </div>
                             <p>
                                 InvestorGate is a leading provider of primary research, bringing you interviews with executives from high-quality companies.
@@ -34,35 +35,35 @@ export default function Footer() {
                                 <li>
                                     <Link href="#">
                                         <a>
-                                            <img src="images/fb.png" alt='Facebook' />
+                                            <Image src="/images/fb.png" alt='Facebook' width="32" height="32" />
                                         </a>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href="#">
                                         <a>
-                                            <img src="images/twitter.png" alt='Twitter' />
+                                            <Image src="/images/twitter.png" alt='Twitter' width="32" height="32" />
                                         </a>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href="#">
                                         <a>
-                                            <img src="images/linkdin.png" alt='Linkdin' />
+                                            <Image src="/images/linkdin.png" alt='Linkdin' width="32" height="32" />
                                         </a>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href="#">
                                         <a>
-                                            <img src="images/youtube.png" alt='Facebook' />
+                                            <Image src="/images/youtube.png" alt='Facebook' width="32" height="32" />
                                         </a>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href="#">
                                         <a>
-                                            <img src="images/google-plus.png" alt='Facebook' />
+                                            <Image src="/images/google-plus.png" alt='Facebook' width="32" height="32" />
                                         </a>
                                     </Link>
                                 </li>

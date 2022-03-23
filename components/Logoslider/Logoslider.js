@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
@@ -29,34 +30,34 @@ export default function Logoslider () {
                 containerClass="carousel-container"
                 removeArrowOnDeviceType={["tablet", "mobile"]} >
                     <div>
-                        <img src="images/seek-logo.png" alt="image1"/>    
+                        <Image width="132" height="52" src="/images/seek-logo.png" alt="image1" />    
                     </div>
                     <div>
-                        <img src="images/evelved-logo.png" alt="image2" />    
+                        <Image width="132" height="52" src="/images/evelved-logo.png" alt="image2" />    
                     </div>
                     <div>
-                        <img src="images/bayern-logo.png" alt="image3"/>    
+                        <Image width="132" height="52" src="/images/bayern-logo.png" alt="image3" />    
                     </div>
                     <div>
-                        <img src="images/smatrics-logo.png" alt="image4"/>    
+                        <Image width="132" height="52" src="/images/smatrics-logo.png" alt="image4" />    
                     </div>
                     <div>
-                        <img src="images/datum360-logo.png" alt="image5"/>    
+                        <Image width="132" height="52" src="/images/datum360-logo.png" alt="image5" />    
                     </div>
                     <div>
-                        <img src="images/datum360-logo.png" alt="image5"/>    
+                        <Image width="132" height="52" src="/images/datum360-logo.png" alt="image5" />    
                     </div>
                     <div>
-                        <img src="images/smatrics-logo.png" alt="image4"/>    
+                        <Image width="132" height="52" src="/images/smatrics-logo.png" alt="image4" />    
                     </div>
                     <div>
-                        <img src="images/bayern-logo.png" alt="image3"/>    
+                        <Image width="132" height="52" src="/images/bayern-logo.png" alt="image3" />    
                     </div>
                     <div>
-                        <img src="images/evelved-logo.png" alt="image2" />    
+                        <Image width="132" height="52" src="/images/evelved-logo.png" alt="image2" />    
                     </div>
                     <div>
-                        <img src="images/seek-logo.png" alt="image1"/>    
+                        <Image width="132" height="52" src="/images/seek-logo.png" alt="image1"/>    
                     </div>
                 </Carousel>
             </div>

@@ -5,6 +5,7 @@ import Logoslider from '../Logoslider/Logoslider';
 import Footer from '../Footer/Footer';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect } from "react";
+import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {
@@ -47,7 +48,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className='banner__right--image'>
-                        <img src="/images/ipad3.png" alt="Home banner" />
+                        <Image src="/images/ipad3.png" alt="Home banner" width="318" height="414" />
                     </div>
                 </div>
                 <Logoslider />
@@ -72,14 +73,14 @@ export default function Home() {
                                 <div className='feed--item--image'>
                                     <Link href='#'>
                                         <a>
-                                            <img src='images/FI-1-1.jpg' alt='BlogImg' />
+                                            <Image src='/images/FI-1-1.jpg' alt='BlogImg' width="1244" height="410" />
                                         </a>
                                     </Link>
                                 </div>
                                 <div className='feed--item--content'>
                                     <div className='feed--hgroup'>
                                         <div className='feed--logo'>
-                                            <img src='images/IG-User-Logo.png' alt='Logo' />
+                                            <Image src='/images/IG-User-Logo.png' alt='Logo' width="48" height="48" />
                                         </div>
                                         <div className="feed--meta--text">
                                             <p className="meta--author">Posted by <strong>Investorgate</strong></p>
@@ -111,14 +112,14 @@ export default function Home() {
                                 <div className='feed--item--image'>
                                     <Link href='#'>
                                         <a>
-                                            <img src='images/FI-2-1.jpg' alt='BlogImg' />
+                                            <Image src='/images/FI-2-1.jpg' alt='BlogImg' width="1244" height="410" />
                                         </a>
                                     </Link>
                                 </div>
                                 <div className='feed--item--content'>
                                     <div className='feed--hgroup'>
                                         <div className='feed--logo'>
-                                            <img src='images/IG-User-Logo.png' alt='Logo' />
+                                            <Image src='/images/IG-User-Logo.png' alt='Logo' width="48" height="48" />
                                         </div>
                                         <div className="feed--meta--text">
                                             <p className="meta--author">Posted by <strong>Investorgate</strong></p>
@@ -150,14 +151,14 @@ export default function Home() {
                                 <div className='feed--item--image'>
                                     <Link href='#'>
                                         <a>
-                                            <img src='images/FI-3-1.jpg' alt='BlogImg' />
+                                            <Image src='/images/FI-3-1.jpg' alt='BlogImg' width="1244" height="410" />
                                         </a>
                                     </Link>
                                 </div>
                                 <div className='feed--item--content'>
                                     <div className='feed--hgroup'>
                                         <div className='feed--logo'>
-                                            <img src='images/IG-User-Logo.png' alt='Logo' />
+                                            <Image src='/images/IG-User-Logo.png' alt='Logo' width="48" height="48" />
                                         </div>
                                         <div className="feed--meta--text">
                                             <p className="meta--author">Posted by <strong>Investorgate</strong></p>
@@ -231,7 +232,7 @@ export default function Home() {
                         <div className='infographic__list--item'>
                             <div className='infographic__header'>
                                 <div className='infographic__icon'>
-                                    <img src="images/message-icon.svg" />
+                                    <Image src="/images/message-icon.svg" alt="message icon" width="64" height="64" />
                                 </div>
                                 <div className='infographic__title'>
                                     <h3>InvestorGate-Led Interviews</h3>
@@ -245,7 +246,7 @@ export default function Home() {
                         <div className='infographic__list--item'>
                             <div className='infographic__header'>
                                 <div className='infographic__icon'>
-                                    <img src="images/multi-message-icon.svg" />
+                                    <Image src="/images/multi-message-icon.svg" alt="multi message icon" width="64" height="64" />
                                 </div>
                                 <div className='infographic__title'>
                                     <h3>Investor-Led Interviews</h3>
@@ -259,7 +260,7 @@ export default function Home() {
                         <div className='infographic__list--item'>
                             <div className='infographic__header'>
                                 <div className='infographic__icon'>
-                                    <img src="images/share-icon.svg" />
+                                    <Image src="/images/share-icon.svg" alt="share icon" width="64" height="64" />
                                 </div>
                                 <div className='infographic__title'>
                                     <h3>Industry Panel Interviews</h3>
@@ -273,7 +274,7 @@ export default function Home() {
                         <div className='infographic__list--item'>
                             <div className='infographic__header'>
                                 <div className='infographic__icon'>
-                                    <img src="images/analysis-icon.svg" />
+                                    <Image src="/images/analysis-icon.svg" alt="analysis icon" width="64" height="64" />
                                 </div>
                                 <div className='infographic__title'>
                                     <h3>Post-Interview Analysis</h3>
@@ -312,7 +313,7 @@ export default function Home() {
                     <div className='section--column__content white-bg'>
                         <div className='meta--header'>
                             <div className='meta--author--image'>
-                                <img src='images/author.png' alt='AuthorImg' />
+                                <Image src='/images/author.png' alt='AuthorImg' width="60" height="60" />
                             </div>
                             <div className='section--content'>
                                 <blockquote>
