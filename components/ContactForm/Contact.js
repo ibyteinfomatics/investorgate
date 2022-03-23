@@ -21,7 +21,7 @@ export default function ContactForm() {
                 </div>
                 <div className='form--item form--item--textarea'>
                     <div className='form--label'>
-                        <label for="msg">Message <span className='required'>*</span></label>
+                        <label htmlFor="msg">Message <span className='required'>*</span></label>
                     </div>
                     <textarea className='form--control' placeholder='Message' id="msg"></textarea>
                 </div>
@@ -31,7 +31,7 @@ export default function ContactForm() {
                     </div>
                     <div className='flex'>
                         <input type="checkbox" id="consent" />
-                        <label for="consent">I consent to my data being used & stored according to our <Link href="#">Privacy Policy</Link></label>
+                        <label htmlFor="consent">I consent to my data being used & stored according to our <Link href="#">Privacy Policy</Link></label>
                     </div>
                 </div>
                 <div className='form--actions'>
