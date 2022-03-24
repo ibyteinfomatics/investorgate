@@ -20,7 +20,7 @@ const responsive = {
 export default function Logoslider () {
     return(
         <React.Fragment>
-            <div className='logo--slider site__width'>
+            <div className='logo--slider'>
                 <Carousel swipeable={false}
                 draggable={false}
                 responsive={responsive}
@@ -30,34 +30,34 @@ export default function Logoslider () {
                 containerClass="carousel-container"
                 removeArrowOnDeviceType={["tablet", "mobile"]} >
                     <div>
-                        <Image width="132" height="52" src="/images/seek-logo.png" alt="image1" />    
+                        <Image width="150" height="62" src="/images/seek-logo.png" alt="image1" />    
                     </div>
                     <div>
-                        <Image width="132" height="52" src="/images/evelved-logo.png" alt="image2" />    
+                        <Image width="150" height="62" src="/images/fujtsu-logo.png" alt="image2" />    
                     </div>
                     <div>
-                        <Image width="132" height="52" src="/images/bayern-logo.png" alt="image3" />    
+                        <Image width="150" height="62" src="/images/marsh-logo.png" alt="image3" />    
                     </div>
                     <div>
-                        <Image width="132" height="52" src="/images/smatrics-logo.png" alt="image4" />    
+                        <Image width="150" height="62" src="/images/smatrics-logo.png" alt="image4" />    
                     </div>
                     <div>
-                        <Image width="132" height="52" src="/images/datum360-logo.png" alt="image5" />    
+                        <Image width="150" height="62" src="/images/datum360-logo.png" alt="image5" />    
                     </div>
                     <div>
-                        <Image width="132" height="52" src="/images/datum360-logo.png" alt="image5" />    
+                        <Image width="150" height="62" src="/images/datum360-logo.png" alt="image5" />    
                     </div>
                     <div>
-                        <Image width="132" height="52" src="/images/smatrics-logo.png" alt="image4" />    
+                        <Image width="150" height="62" src="/images/fujtsu-logo.png" alt="image4" />    
                     </div>
                     <div>
-                        <Image width="132" height="52" src="/images/bayern-logo.png" alt="image3" />    
+                        <Image width="150" height="62" src="/images/marsh-logo.png" alt="image3" />    
                     </div>
                     <div>
-                        <Image width="132" height="52" src="/images/evelved-logo.png" alt="image2" />    
+                        <Image width="150" height="62" src="/images/evelved-logo.png" alt="image2" />    
                     </div>
                     <div>
-                        <Image width="132" height="52" src="/images/seek-logo.png" alt="image1"/>    
+                        <Image width="150" height="62" src="/images/seek-logo.png" alt="image1"/>    
                     </div>
                 </Carousel>
             </div>

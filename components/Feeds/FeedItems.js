@@ -10,14 +10,14 @@ export default function FeedItems(props){
                 <div className='feed--items--wrapper'>
                     {props.blogImg &&
                     <div className='feed--item--image'>
-                        <Image src={props.blogImg} alt='BlogImg' width="1244" height="410" />
+                        <Image src={props.blogImg} alt='BlogImg' layout="fill" objectFit="cover" quality={100} />
                     </div>
                     }
                     <div className='feed--item--content'>
                         <div className='feed--hgroup'>
                             {props.feedLogo &&
                             <div className='feed--logo'>
-                                <Image src={props.feedLogo} alt='Logo' width="48" height="48" />
+                                <Image src={props.feedLogo} alt='Logo' width="46" height="46" />
                             </div>
                             }
                             <div className="feed--meta--text">

@@ -8,13 +8,13 @@ export default function ContactForm() {
                 <div className='form__item--grid'>
                     <div className='form--item'>
                         <div className='form--label'>
-                            <label form="name">Name <span className='required'>*</span></label>
+                            <label htmlFor="name">Name <span className='required'>*</span></label>
                             <input className='form--control' id="name" placeholder='Name' type="text"></input>
                         </div>
                     </div>
                     <div className='form--item'>
                         <div className='form--label'>
-                            <label form="email">Email <span className='required'>*</span></label>
+                            <label htmlFor="email">Email <span className='required'>*</span></label>
                             <input className='form--control' id="email" placeholder='Emaail' type="email"></input>
                         </div>
                     </div>
