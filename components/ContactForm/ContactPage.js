@@ -11,7 +11,7 @@ export default function Contact() {
             <Header />
 
             {/* Top Banner */}
-            <div className='style--banner servcies--banner' data-aos="fade-up">
+            <div className='style--banner servcies--banner'>
                 <Sitebanner
                     bannerTitle="Have a question? Get in touch"
                     bannerText1="Whether you’re an investor interested in our service, an executive keen on joining our community, or a student inquiring about a university partnership, get in touch here."
@@ -21,7 +21,7 @@ export default function Contact() {
 
 
             {/* Contact Form section */}
-            <div className='form--section section' data-aos="fade-up">
+            <div className='form--section section'>
                 <div className='section__wrapper site__width'>
                     <SectionHgroup
                         sectionSubtitle="general inquiries"

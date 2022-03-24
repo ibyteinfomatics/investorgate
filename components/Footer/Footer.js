@@ -1,4 +1,4 @@
-import Link from 'next/dist/client/link';
+import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
 
@@ -10,7 +10,7 @@ export default function Footer() {
                     <div className='divideFooter'>
                         <div className='footerCol'>
                             <div className='footerLogo'>
-                                <Image src='/images/Final-InvestorGate-Logo-White.svg' alt='Footer Logo' layout="fill" quality={100} />
+                                <Link href="/"><Image src='/images/Final-InvestorGate-Logo-White.svg' alt='Footer Logo' layout="fill" quality={100} /></Link>
                             </div>
                             <p>
                                 InvestorGate is a leading provider of primary research, bringing you interviews with executives from high-quality companies.
@@ -73,19 +73,19 @@ export default function Footer() {
                             <h3 className="title widget-title">Menu</h3>
                             <ul>
                                 <li>
-                                    <Link href='#'><a>Home</a></Link>
+                                    <Link href='/'><a>Home</a></Link>
                                 </li>
                                 <li>
-                                    <Link href='#'><a>Services</a></Link>
+                                    <Link href='services'><a>Services</a></Link>
                                 </li>
                                 <li>
-                                    <Link href='#'><a>For Executives</a></Link>
+                                    <Link href='executives'><a>For Executives</a></Link>
                                 </li>
                                 <li>
                                     <Link href='#'><a>Blog</a></Link>
                                 </li>
                                 <li>
-                                    <Link href='#'><a>Contact</a></Link>
+                                    <Link href='contact'><a>Contact</a></Link>
                                 </li>
                             </ul>
                         </div>
