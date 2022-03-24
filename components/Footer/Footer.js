@@ -97,6 +97,13 @@ export default function Footer() {
                             <Link href="https://coacherly.com/privacy-policy/"><a>Privacy &amp; Cookie Policy</a></Link> | <Link href="https://coacherly.com/terms-conditions/"><a>Terms of Service</a></Link> | <Link href="https://coacherly.com/executive-terms-of-engagement/"><a>Executive Terms of Engagement</a></Link> | <Link href="https://coacherly.com/compliance-policy-and-process/"><a>Compliance Policy &amp; Process</a></Link>
                         </div>
                     </div>
+                    <div className="back__top--btn">
+                        <Link href="#top">
+                            <a>
+                            <Image src="/images/back-to-top-button-red.png" alt="Back to Top Button" layout="fill" quality={100} />
+                            </a>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </React.Fragment>

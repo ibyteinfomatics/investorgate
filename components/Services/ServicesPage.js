@@ -1,6 +1,8 @@
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import React, { useEffect } from "react";
+import Link from 'next/link';
+import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -27,7 +29,7 @@ export default function ServicesPage() {
             <div className='style--banner servcies--banner'>
                 <Sitebanner 
                     bannerTitle="Leading the democratization of expert insights"
-                    bannerText1="At InvestorGate, we understand the critical role primary research plays in understanding companies and building investment cases. That’s why we’re driving change in the expert network industry and helping expand the reach of expert insights. It’s our contribution to the sharing economy."
+                    bannerText1="At InvestorGate, we understand the critical role primary research plays in understanding companies and building investment cases. That’s why we’re driving change in the expert network industry and increasing the accessibility of expert insights."
                     bannerButton="Contact Us"
                 />
             </div>
@@ -53,8 +55,8 @@ export default function ServicesPage() {
                             <ul className='content--list'>
                                 <li>Exclusive expert interviews via our on-demand platform</li>
                                 <li>High-quality global mid-caps for increased idea flow</li>
-                                <li>Trusted, qualitative insights to make higher conviction decisions</li>
-                                <li>Access to the most relevant experts through customer-sourcing</li>
+                                <li>Trusted, qualitative insights for high conviction decisions</li>
+                                <li>Access to the most relevant experts through custom-sourcing</li>
                                 <li>Calls with experts at a fraction of the cost of traditional networks</li>
                                 <li>Best-in-class client experience</li>
                             </ul>
@@ -76,13 +78,13 @@ export default function ServicesPage() {
                     <div className='infographic__list'>
                         <InfographicList
                             infoIcon="/images/message-icon.svg"
-                            infoTitle="InvestorGate-Led Interviews"
+                            infoTitle="InvestorGate-led Interviews"
                             infoContent="As part of our commitment to ‘original content’, InvestorGate Analysts host and publish interviews with executives. These are usually in a structured, hour-long format with accessible and consumable insights for our members to watch, listen or read."
                         />
 
                         <InfographicList 
                             infoIcon="/images/multi-message-icon.svg"
-                            infoTitle="Investor-Led Interviews"
+                            infoTitle="Investor-led Interviews"
                             infoContent="InvestorGate organises executive interviews which are led by our investor clients. Conversations are recorded, edited and posted to the site. InvestorGate provides technical support and guidance but is not involved in the interview itself. This format lends itself to investors asking their most burning questions about a company and hearing directly from the executive."
                         />
 
@@ -129,6 +131,42 @@ export default function ServicesPage() {
                             infoTitle="Shared Knowledge"
                             infoContent="Learn from other top investors through a shared-knowledge platform and community that keeps giving."
                         />
+                    </div>
+                </div>
+            </div>
+
+            {/* Speech Banner */}
+            <div className='style--banner speech--banner'>
+                <Sitebanner 
+                    bannerSubtitle="ACADEMIA"
+                    bannerTitle="Partnering with leading academic institutions"
+                    bannerText1="We work closely with many top universities, colleges and business schools to ensure students can benefit from the InvestorGate platform."
+                    bannerText2="If you’re a professor, student, or staff member please get in touch to discuss how we can work with your institution."
+                />
+                <div className='logo__wrapper site__width'>
+                    <div className='banner__logo--lists'>
+                        <ul>
+                            <li>
+                                <Link href="#"><a>
+                                    <Image src="/images/un--logo.png" alt="Banner Logo" layout="fill" quality={100} />
+                                </a></Link>
+                            </li>
+                            <li>
+                                <Link href="#"><a>
+                                    <Image src="/images/bu--logo.png" alt="Banner Logo" layout="fill" quality={100} />
+                                </a></Link>
+                            </li>
+                            <li>
+                                <Link href="#"><a>
+                                    <Image src="/images/hec--logo.png" alt="Banner Logo" layout="fill" quality={100} />
+                                </a></Link>
+                            </li>
+                            <li>
+                                <Link href="#"><a>
+                                    <Image src="/images/abs--logo.png" alt="Banner Logo" layout="fill" quality={100} />
+                                </a></Link>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

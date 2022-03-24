@@ -65,7 +65,7 @@ p{
   @apply bg-white;
 }
 html {
-    @apply text-base;
+    @apply text-base scroll-smooth;
 }
 body {
     font-family: 'Montserrat', sans-serif;
@@ -229,37 +229,45 @@ nav.site__navigation {
 .style--banner{
   @apply px-5;
 }
+.services__page .style--banner, .contact__page .style--banner{
+  min-height: 34.375rem;
+  display: flex;
+  align-items: center;
+}
 .style--banner, .subscribe__bg{
-  @apply relative bg-no-repeat;
+  @apply relative bg-no-repeat text-white bg-cover bg-center;
 }
 .style--banner:before,
 .subscribe__bg:before{
   content: '';
   @apply inset-0 absolute;
-  background-color: transparent;
+  background-color: #000;
   background-image: linear-gradient(90deg, #000000 0%, #00000066 100%);
   opacity: 0.64;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 .banner--style-1{
-  @apply text-white bg-cover;
   background-image: url(/images/home-banner.jpg);
   padding: 4.5% 0% 0.5% 0%;
   background-position-x: 50%;
 }
 .banner--style-2{
-  @apply text-white bg-cover;
   background-image: url(/images/exclusive--banner.jpg);
 }
 .servcies--banner{
-  @apply text-white bg-cover;
   background-image: url(/images/servcies-banner.jpg);
+}
+.contact--banner{
+  background-image: url(/images/contact-banner.jpg);
+}
+.speech--banner{
+  background-image: url(/images/speech--bubbles.jpg);
 }
 .servcies--banner:before{
   opacity: 0;
 }
 .banner__wrapper{
-  @apply py-5 main__grid relative mx-auto px-5; 
+  @apply py-5 main__grid relative mx-auto px-5 w-full; 
   padding-right: 0;
   max-width: 68.125rem;
 }
@@ -270,6 +278,12 @@ nav.site__navigation {
 .banner--style-1 .banner__content{
   margin-top: 0;
   margin-bottom: 0;
+}
+.banner__subtitle{
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.65;
+  color: rgba(249, 249, 249, 0.75);
 }
 .banner__title {
   @apply mb-5 mt-5;
@@ -325,6 +339,11 @@ nav.site__navigation {
   @apply p-5;
   margin: 3.125rem 0;
 }
+.services__page .section:not(.siteFooter) {
+  @apply my-0;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+}
 .section.has--bg{
   margin: 0;
 }
@@ -336,6 +355,9 @@ nav.site__navigation {
 }
 .subtitle.section--subtitle h3 {
   @apply small__text;
+}
+.services__page .subtitle.section--subtitle h3{
+  color: #A4A3A6;
 }
 .title.section--title p{
   @apply large__text;
@@ -468,9 +490,10 @@ p.meta--desc {
   padding: 0.625rem;
 }
 .infographic__icon {
-  margin-bottom: 0.938rem;
+  margin-bottom: 1.438rem;
   width: 3.125rem;
   height: 3.125rem;
+  margin-top: 0.5rem;
 }
 .infographic__title {
   margin: 0.325rem 0;
@@ -478,7 +501,15 @@ p.meta--desc {
   font-size: 1.25rem;
   letter-spacing: -0.01em;
 }
-
+.services__page .infographic__title{
+  @apply lg--text;
+}
+.services__page .infographic__content p{
+  margin-top: 0.9375rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.94rem;
+  padding-right: 0.125rem;
+}
 
 /* Two column section */
 .two--column--section{
@@ -565,7 +596,7 @@ p.author-desi {
 }
 .siteFooter{
   background-color: #17161a;
-  @apply py-0;
+  @apply py-0 relative;
 }
 .site-footer .page-container + .site-info .site-info-holder {
   border-top: 1px solid rgba(136, 136, 136, 0.15);
@@ -670,39 +701,57 @@ ul.footerNav li a {
 
 /* Contact form styling */
 .form--label label {
-  @apply block font-medium;
+  @apply block font-medium mb-2.5;
   font-size: 0.93rem;
+}
+.form--label label span.required{
+  color: #f00;
 }
 .form--control {
   @apply w-full text-base;
+  background-color: #f9f9f9;
   border: 1px solid #818a91;
   padding: 0.875rem 0.9375rem;
   border-radius: 0.4375rem;
 }
+.contact__page .form--control{
+  background-color: transparent;
+}
+.services__page .form--control{
+  border-color: #E1E1E1;
+}
+.executives__page .form--control{
+  @apply border-0;
+}
+.services__page .form--label label span.required,
+.executives__page .form--label label span.required{
+  @apply hidden;
+}
 .form--item {
-  @apply mb-6;
+  @apply mb-2.5;
 }
 .form--item.form--item--textarea .form--control {
-  min-height: 7.5rem;
+  height: 9.375rem;
 }
 .form__item--grid {
   @apply main__grid;
-  column-gap: 1.5rem;
+  column-gap: 0.625rem;
 }
 .form--checkbox--label {
   font-size: 0.93rem;
   font-weight: 500;
 }
 input[type="checkbox"] {
-  width: 1rem;
-  height: 1rem;
-  margin: 0.25rem .5rem 0 0;
+  margin: 0 .5rem 0 0;
 }
 .form--actions button {
-  @apply text-white text-base font-bold py-3 px-4;
+  @apply text-white font-bold px-4 leading-none w-full;
   background: #c80700;
   border-radius: 0.4375rem;
   transition: 0.3s;
+  font-size: 0.9375rem;
+  padding-top: 0.782rem;
+  padding-bottom: 0.782rem;
 }
 .form--actions button:hover {
   opacity: 0.85;
@@ -845,26 +894,32 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /*content list */
 .mt-3vh{
-  margin-top: 3vh;
+  margin-top: 4vh;
+}
+.content--list{
+  padding-top: 0.625rem;
 }
 .content--list li{
   @apply font-medium flex items-center;
-  padding-bottom: 0.5rem;
+  padding: 0.28125rem 0;
   line-height: 1.65;
+}
+.content--list li:first-child{
+  padding-top: 0;
 }
 .content--list li:before{
   content: '';
   width: 0.5rem;
   margin-right: 1rem;
-  height: 1rem;
+  height: 0.875rem;
   display: block;
   border: solid #c80700;
-  border-width: 0 0.125rem 0.125rem 0;
+  border-width: 0 0.1875rem 0.1875rem 0;
   transform: rotate(45deg);
 }
 
 .section--small-width{
-  max-width: 40rem;
+  max-width: 37rem;
 }
 .section--ex--small-width{
   max-width: 30rem;
@@ -872,11 +927,29 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .infographic__list.full__width--list {
   grid-template-columns: repeat(1, 1fr);
 }
+.infographic--style-2{
+  background: #f9f9f9;
+}
+.services__page .infographic--style-2.section{
+  padding-bottom: 12vh;
+}
 .infographic--style-2 .infographic__list {
   grid-template-columns: repeat(1, 1fr);
+  row-gap: 4vh;
+  margin-top: 1.875rem;
+}
+.services__page .infographic__list {
+  margin-top: 1.875rem;
+  column-gap: 1.25rem;
+}
+.services__page .infographic__list--item{
+  padding: 4.4vh;
 }
 .infographic--style-2 .infographic__list--item{
-  padding: 4.4vh;
+  background: #fff;
+}
+.services__page .infographic--section .section--title p{
+  margin-bottom: 0;
 }
 
 /* Accordian styling */
@@ -955,11 +1028,86 @@ Note: Beware of modifying this element as it can break the animations - you shou
   margin-top: 1rem;
 }
 
+/* Banner logo wrapper without slider */
+.services__page .style--banner.speech--banner{
+  @apply block;
+  padding-top: 3.5%;
+}
+.speech--banner .banner__title h3{
+  @apply large__text;
+}
+.logo__wrapper .banner__logo--lists ul{
+  @apply main__grid pb-5;
+  column-gap: 1.25rem;
+  row-gap: 1.25rem;
+}
+.logo__wrapper .banner__logo--lists ul li{
+  @apply relative w-full py-10;
+  height: 11.125rem;
+}
+.logo__wrapper .banner__logo--lists ul li a {
+  position: relative;
+  display: block;
+  width: 16.1875rem;
+  height: 100%;
+  margin: auto;
+}
+.services__page .style--banner.speech--banner .banner__content {
+  margin-top: 0;
+}
+.services__page .style--banner.speech--banner .banner__wrapper {
+  padding-top: 0;
+}
+/* .services__page .style--banner.speech--banner .banner__title.title {
+  margin-top: 0;
+} */
+
+@keyframes logoFadeUp {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); }
+  50% {
+    -webkit-transform: translateY(-webkit-calc(-100% - 25px));
+            transform: translateY(calc(-100% - 25px));
+    opacity: 1; }
+  51% {
+    -webkit-transform: translateY(-webkit-calc(-100% - 25px));
+            transform: translateY(calc(-100% - 25px));
+    opacity: 0; }
+  52% {
+    -webkit-transform: translateY(-webkit-calc(100% + 25px));
+            transform: translateY(calc(100% + 25px)); }
+  86% {
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); 
+    } 
+}
+.logo__wrapper .banner__logo--lists ul li a:hover img{
+  -webkit-animation: logoFadeUp cubic-bezier(0.4, 0, 0.2, 1) 0.75s 1;
+    animation: logoFadeUp cubic-bezier(0.4, 0, 0.2, 1) 0.75s 1;
+}
+
+.back__top--btn {
+  @apply fixed w-16 h-16 opacity-0;
+  bottom: 1.25rem;
+  right: 3rem;
+  transition: 0.3s;
+}
+.show--top--btn .back__top--btn{
+  opacity: 1;
+}
 
 /* Responsive styling */
 @media screen and (max-width: 47.999rem) {
   .desktop__header{
     @apply hidden;
+  }
+}
+@media screen and (min-width: 30rem){
+  .logo__wrapper .banner__logo--lists ul{
+    @apply grid__2;
   }
 }
 @media screen and (min-width: 48rem){
@@ -990,6 +1138,18 @@ Note: Beware of modifying this element as it can break the animations - you shou
     max-width: 100% !important;
     right: -0.1875rem !important;
   }
+  .contact__page .banner__wrapper{
+    @apply main__grid;
+  }
+  .contact__page .banner__content{
+    max-width: 42.921%;
+  }
+  .form--actions button {
+    max-width: 20%;
+  }
+  .contact__page .form--actions button {
+    max-width: 100%;
+  }
 }
 @media screen and (min-width: 60rem){
   .banner__content {
@@ -1010,6 +1170,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .infographic--style-3 .infographic__list{
     @apply grid__3;
   }
+  .logo__wrapper .banner__logo--lists ul{
+    @apply grid__4;
+  }
 }
 @media screen and (min-width: 64rem) {
   .header__wrap--inner{
@@ -1029,6 +1192,21 @@ Note: Beware of modifying this element as it can break the animations - you shou
     margin-top: 3.25rem;
   }
 }
+@media screen and (min-width: 68.75rem){
+  .contact__page .banner__wrapper,
+  .contact__page .site__width,
+  .services__page .banner__wrapper,
+  .services__page .site__width,
+  .executives__page .banner__wrapper,
+  .executives__page .site__width{
+    @apply p-0;
+  }
+  .contact__page .siteFooter .site__width,
+  .services__page .siteFooter .site__width,
+  .executives__page .siteFooter .site__width{
+    @apply px-5;
+  }
+}
 @media screen and (min-width: 80.0625rem){
   .site__width, .banner__wrapper{
     max-width: 73.75rem;
@@ -1043,9 +1221,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .banner__title h3 {
     font-size: 3.375rem;
   }
-  .text--headline{
+  .text--headline,
+  .services__page .infographic__title{
     @apply lg--text--responsive;
   }
+  .speech--banner .banner__title h3,
   .title.section--title p{
     @apply large__text--resposive;
   }
