@@ -1,24 +1,16 @@
-import Link from 'next/link';
 import Header from '../Header/Header';
-import Logoslider from '../Logoslider/Logoslider';
 import Footer from '../Footer/Footer';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect } from "react";
-import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import {
-    faLongArrowRight,
-} from "@fortawesome/free-solid-svg-icons";
 
 import Sitebanner from '../Sitebanner/Sitebanner';
-import FeedItems from '../Feeds/FeedItems';
 import SectionHgroup from '../SectionHgroup/SectionHgroup';
-import InfographicList from './ServciesList';
 import ContactForm from '../ContactForm/Contact';
+import InfographicList from './ServicesList';
 
 
-export default function Servcies() {
+export default function ServicesPage() {
     useEffect(() => {
         AOS.init({
             easing: "ease-out-cubic",
@@ -32,7 +24,7 @@ export default function Servcies() {
             <Header />
 
             {/* Top Banner */}
-            <div className='style--banner servcies--banner' data-aos="fade-up">
+            <div className='style--banner servcies--banner'>
                 <Sitebanner 
                     bannerTitle="Leading the democratization of expert insights"
                     bannerText1="At InvestorGate, we understand the critical role primary research plays in understanding companies and building investment cases. That’s why we’re driving change in the expert network industry and helping expand the reach of expert insights. It’s our contribution to the sharing economy."
@@ -42,7 +34,7 @@ export default function Servcies() {
 
 
             {/* Offer section */}
-            <div className='two--column--section section has--no--bg' data-aos="fade-up">
+            <div className='two--column--section section has--no--bg'>
                 <div className='section__wrapper site__width'>
                     <div className='section--column__content'>
                         <SectionHgroup 
@@ -73,7 +65,7 @@ export default function Servcies() {
 
 
             {/* Interview Content */}
-            <div className='infographic--section section infographic--style-2' data-aos="fade-up">
+            <div className='infographic--section section infographic--style-2'>
                 <div className='section__wrapper site__width'>
                     <div className='section--small-width'>
                         <SectionHgroup 
@@ -81,7 +73,7 @@ export default function Servcies() {
                             sectionTitle="InvestorGate produces four types of interview content:"
                         />
                     </div>
-                    <div className='infographic__list' data-aos="fade-up" data-aos-duration="2000">
+                    <div className='infographic__list'>
                         <InfographicList
                             infoIcon="/images/message-icon.svg"
                             infoTitle="InvestorGate-Led Interviews"
@@ -111,7 +103,7 @@ export default function Servcies() {
 
 
             {/* Commitment */}
-            <div className='infographic--section section infographic--style-3' data-aos="fade-up">
+            <div className='infographic--section section infographic--style-3'>
                 <div className='section__wrapper site__width'>
                     <div className='section--small-width'>
                         <SectionHgroup 
@@ -119,7 +111,7 @@ export default function Servcies() {
                             sectionTitle="Trusted primary research for better decision making"
                         />
                     </div>
-                    <div className='infographic__list' data-aos="fade-up" data-aos-duration="2000">
+                    <div className='infographic__list' data-aos="fade-up">
                         <InfographicList 
                             infoIcon="/images/file-icon.svg"
                             infoTitle="Content Library"
@@ -143,7 +135,7 @@ export default function Servcies() {
 
 
             {/* Contact Form section */}
-            <div className='form--section section' data-aos="fade-up">
+            <div className='form--section section'>
                 <div className='section__wrapper site__width'>
                     <SectionHgroup 
                         sectionSubtitle="Investorgate"

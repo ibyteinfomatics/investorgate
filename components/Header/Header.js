@@ -95,8 +95,8 @@ export default function Header(){
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/servcies">
-                                        <a className={router.pathname == "/servcies" ? "active" : ""}>Services</a>
+                                    <Link href="/services">
+                                        <a className={router.pathname == "/services" ? "active" : ""}>Services</a>
                                     </Link>
                                 </li>
                                 {/* <li>
@@ -140,8 +140,8 @@ export default function Header(){
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/servcies">
-                                        <a className={router.pathname == "/servcies" ? "active" : ""}>Services</a>
+                                    <Link href="/services">
+                                        <a className={router.pathname == "/services" ? "active" : ""}>Services</a>
                                     </Link>
                                 </li>
                                 {/* <li>
