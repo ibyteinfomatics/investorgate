@@ -3,22 +3,37 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 ::selection {
   background-color: #fcb3bf;
 }
 .site__width{
-  max-width: 81.25rem;
-  @apply mx-auto;
+  max-width: 68.125rem;
+  @apply mx-auto px-5;
 }
-.red--button a,
+.btn a{
+  @apply inline-block font-bold highlight--font;
+  border: 0.0625rem solid;
+  border-radius: 0.3125rem;
+  padding: 0.75rem 1.182rem;
+  margin-top: 0.9375rem;
+}
+.red--button a{
+  background-color: #D90A2C;
+  border-color: #D90A2C;
+  color: #fff;
+}
 .subscribe__btn a{
   background-color: #c80700;
   border-color: #c80700;
   color: #ffffff;
 }
+.space-font{
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
 .highlight--font{
-  font-family: "Space Grotesk Bold", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  @apply space-font font-bold;
 }
 .main__grid{
   @apply grid;
@@ -42,11 +57,6 @@
 .grid__6{
   grid-template-columns: repeat(6, 1fr);
 }
-.btn a{
-  @apply inline-block rounded-md font-bold;
-  padding: 0.875rem 1.125rem;
-  margin-top: 0.9375rem;
-}
 p{
   @apply my-2.5;
   line-height: 1.65;
@@ -59,6 +69,9 @@ html {
 }
 body {
     font-family: 'Montserrat', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .ex__large__text{
@@ -67,10 +80,10 @@ body {
   letter-spacing: -0.06640625rem;
 }
 .large__text{
-  font-size: 2.484375rem;
+  font-size: 2.5rem;
   font-weight: 800;
   line-height: 1.1;
-  letter-spacing: -0.02484375rem;
+  letter-spacing: -0.025rem;
 }
 .small__text{
   font-size: 0.9rem;
@@ -127,7 +140,12 @@ body {
   transition-delay: 0.5s;
 }
 .desktop__header .site__logo{
-  width: 15rem;
+  width: 15.0625rem;
+  height: 2.5rem;
+  position: relative;
+}
+.site__logo a.logo__link{
+  @apply block leading-none;
 }
 .desktop__header .site__logo img{
   @apply w-full;
@@ -135,24 +153,31 @@ body {
 .header__wrap--inner {
   @apply flex items-center justify-between;
   padding: 0 4.4vh;
-  min-height: 6.25rem;
+  /* min-height: 5.75rem; */
 }
 .scrollSticky.addScroll.desktop__header .header__wrap--inner{
   height: auto;
   min-height: 9vh;
 }
 .site__navigation ul {
-  @apply flex items-center mr-12;
+  @apply flex items-center;
+  margin-right: 3.461875rem;
 }
 nav.site__navigation {
   @apply flex;
 }
 .site__navigation ul li a {
-  @apply flex items-center text-base leading-none font-medium;
-    padding: 0 1.3vw;
+  @apply flex items-center text-base font-medium;
+  padding: 0 1.3vw;
 }
 .subscribe__btn a {
-  @apply pt-2.5 pb-3 px-4 rounded-md highlight--font flex items-center leading-none mt-0;
+  @apply rounded-md font-bold highlight--font flex items-center leading-none mt-0;
+  padding-left: 0.978rem;
+  padding-right: 0.978rem;
+  padding-top: 0.541rem;
+  font-weight: 700;
+  font-size: 0.96rem;
+  padding-bottom: 0.75rem;
 }
 .red--button a span{
   @apply mr-2;
@@ -198,6 +223,8 @@ nav.site__navigation {
 .banner--style-1{
   @apply text-white bg-cover;
   background-image: url(/images/home-banner.jpg);
+  padding: 4.5% 0% 0.5% 0%;
+  background-position-x: 50%;
 }
 .banner--style-2{
   @apply text-white bg-cover;
@@ -211,38 +238,54 @@ nav.site__navigation {
   opacity: 0;
 }
 .banner__wrapper{
-  @apply py-5 site__width main__grid relative;
+  @apply py-5 main__grid relative mx-auto px-5; 
+  padding-right: 0;
+  max-width: 68.125rem;
 }
 .banner__content{
   margin-top: 7vh;
   margin-bottom: 7vh;
 }
-.banner--style-1 .banner__wrapper{
-  padding-top: 8%;
-}
 .banner--style-1 .banner__content{
   margin-top: 0;
+  margin-bottom: 0;
 }
 .banner__title {
-  @apply mb-5;
+  @apply mb-5 mt-5;
 }
 .servcies--banner .banner__title{
   max-width: 30rem;
 }
-.banner__title h3{
-  @apply ex__large__text font-bold;
+.banner__title h3 {
+  font-weight: 700;
+  font-size: 3.375rem;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 .banner__text p{
   @apply text__base my-2.5;
 }
 .banner__right--image {
-  @apply flex justify-end;
+  @apply mt-12;
 }
 .style--banner .logo--slider{
   padding-bottom: 2%;
+  margin-left: -4%;
+  margin-right: -4%;
+}
+.slider__title {
+  color: #fff;
+  font-weight: 600;
+  z-index: 999;
+  position: relative;
+  font-size: 1.25rem;
+  padding-bottom: 1.125rem;
+}
+.slider__title h5{
+  letter-spacing: -0.01em;
 }
 .react-multi-carousel-item  {
-  @apply px-16;
+  @apply px-0 text-center;
 }
 .react-multiple-carousel__arrow{
   @apply hidden;
@@ -318,7 +361,7 @@ nav.site__navigation {
   box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
 }
 .feed--item--content {
-  @apply relative pb-5;
+  @apply relative;
 }
 .feed--items--wrapper:hover .feed--item--image {
   opacity: 1;
@@ -335,7 +378,7 @@ nav.site__navigation {
   width: 3rem;
 }
 .feed--logo img{
-  @apply w-full;
+  @apply w-full rounded-full;
 }
 p.meta--author,
 p.meta--date,
@@ -343,7 +386,7 @@ p.meta--date,
   @apply smaller__link--text m-0;
 }
 .feed--text--wrap {
-  padding: 4.4vh;
+  padding: 0 4.4vh 4.4vh;
 }
 .feed--category a:hover{
   color: #c80700;
@@ -358,7 +401,7 @@ p.meta--date,
   color: #fff;
 }
 .text--content{
-  @apply mt-2.5;
+  @apply mt-2.5 mb-0;
 }
 
 /* Feed style -2 */
@@ -396,7 +439,9 @@ p.meta--desc {
   padding: 0.625rem;
 }
 .infographic__icon {
-  @apply w-16 mb-5;
+  margin-bottom: 0.938rem;
+  width: 3.125rem;
+  height: 3.125rem;
 }
 .infographic__title {
   margin: 0.325rem 0;
@@ -414,8 +459,11 @@ p.meta--desc {
   padding-top: 8vh;
   padding-bottom: 7vh;
 }
+.two--column--section.has--bg .btn{
+  padding-top: 0.625rem;
+}
 .two--column--section .section__wrapper{
-  @apply main__grid;
+  @apply main__grid py-5;
   column-gap: 2.5rem;
   row-gap: 2.5rem;
 }
@@ -444,6 +492,7 @@ p.meta--desc {
 .blockquote__title {
   margin: 0.3125rem 0;
   font-weight: 600;
+  font-size: 1.116rem;
 }
 blockquote p{
   @apply mt-0 mb-10;
@@ -467,7 +516,7 @@ p.author-desi {
 /* Subscribe */
 .subscribe__bg{
   background-image: url(/images/oh__img147.jpg);
-  @apply text-white bg-cover;
+  @apply text-white bg-center;
 }
 .subscribe__bg:before{
   background: #000;
@@ -481,8 +530,13 @@ p.author-desi {
 }
 
 /* Footer Css */
+.site-info-holder a, .site-info-holder .left {
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
 .siteFooter{
   background-color: #17161a;
+  @apply py-0;
 }
 .site-footer .page-container + .site-info .site-info-holder {
   border-top: 1px solid rgba(136, 136, 136, 0.15);
@@ -518,19 +572,30 @@ a:hover{
 .site-info-holder a:hover{
   color: #c80700;
 }
+/* .footerCol{
+  padding-bottom: .338rem;
+} */
 .footerCol p {
   font-size: 1rem;
   font-weight: 400;
+  margin: 0;
+  padding-top: 3.4vh;
+  padding-bottom: 0.3125rem;
   color: rgba(255,255,255,0.8);
 }
 .title.widget-title {
   font-weight: 600;
   font-size: 1rem;
   margin-bottom: 1.25rem;
+  line-height: 1.65;
   color: #6a696c;
 }
 .footerLogo{
-  @apply mb-4 w-full;
+  @apply relative;
+  width: 15.0625rem;
+  height: 2.5rem;
+  margin-bottom: 0.8rem;
+  margin-top: -0.125rem;
 }
 .footerLogo img{
   @apply w-full;
@@ -893,6 +958,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .banner__content {
     max-width: 45.6rem;
   }
+  .banner__right--image {
+    @apply flex justify-end mt-0 mb-0;
+    max-height: 25.0625rem;
+  }
   .banner__right--image img {
     max-width: 61.113%;
   }
@@ -921,8 +990,26 @@ Note: Beware of modifying this element as it can break the animations - you shou
     font-size: 1.25rem;
   }
 }
+@media screen and (min-width: 80rem){
+  .site__width, .banner__wrapper{
+    max-width: 73.75rem;
+  }
+}
+@media screen and (min-width: 85.375rem){
+  .site__width, .banner__wrapper{
+    max-width: 81.25rem;
+  }
+}
 @media screen and (min-width: 121rem){
   html{
     font-size: 1vw;
   }
+}
+
+.banner__logo--slider {
+  margin-top: 3.25rem;
+}
+.react-multi-carousel-item > div > span{
+  display: flex;
+  align-items: center;
 }

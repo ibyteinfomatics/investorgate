@@ -3,11 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-    faLongArrowRight,
-    faMessage,
-    faShareAlt,
-    faComments,
-    faLineChart,
+    faArrowRight,
 } from "@fortawesome/free-solid-svg-icons"
 
 export default function Sitebanner(props){
@@ -30,14 +26,14 @@ export default function Sitebanner(props){
                     }
                     {props.bannerButton &&
                     <div className='banner__btn btn red--button'>
-                        <Link href="#"><a><span>{props.bannerButton}</span> <FontAwesomeIcon icon={faLongArrowRight} /></a></Link>
+                        <Link href="#"><a><span>{props.bannerButton}</span> <FontAwesomeIcon icon={faArrowRight} /></a></Link>
                     </div>
                     }
                 </div>
             </div>
             {props.bannerImage &&
                 <div className='banner__right--image'>
-                    <Image src={props.bannerImage} alt="Home banner" width="318" height="414" />
+                    <Image src={props.bannerImage} alt="Home banner" width="308" height="401" />
                 </div>
             }
         </div>

@@ -26,46 +26,46 @@ export default function Header(){
             }
           });
 
-          var cursor = $(".cursor");
+        //   var cursor = $(".cursor");
 
-        $(window).mousemove(function(e) {
-            cursor.css({
-                top: e.clientY - cursor.height() / 2,
-                left: e.clientX - cursor.width() / 2
-            });
-        });
+        // $(window).mousemove(function(e) {
+        //     cursor.css({
+        //         top: e.clientY - cursor.height() / 2,
+        //         left: e.clientX - cursor.width() / 2
+        //     });
+        // });
 
-        $(window)
-            .mouseleave(function() {
-                cursor.css({
-                    opacity: "0"
-                });
-            })
-            .mouseenter(function() {
-                cursor.css({
-                    opacity: "1"
-                });
-            });
+        // $(window)
+        //     .mouseleave(function() {
+        //         cursor.css({
+        //             opacity: "0"
+        //         });
+        //     })
+        //     .mouseenter(function() {
+        //         cursor.css({
+        //             opacity: "1"
+        //         });
+        //     });
 
-        $("a")
-            .mouseenter(function() {
-                cursor.addClass("cursor--link");
-            })
-            .mouseleave(function() {
-                cursor.removeClass("cursor--link");
-            });
+        // $("a")
+        //     .mouseenter(function() {
+        //         cursor.addClass("cursor--link");
+        //     })
+        //     .mouseleave(function() {
+        //         cursor.removeClass("cursor--link");
+        //     });
 
-        $(window)
-            .mousedown(function() {
-                cursor.css({
-                    transform: "scale(.2)"
-                });
-            })
-            .mouseup(function() {
-                cursor.css({
-                    transform: "scale(1)"
-                });
-            });
+        // $(window)
+        //     .mousedown(function() {
+        //         cursor.css({
+        //             transform: "scale(.2)"
+        //         });
+        //     })
+        //     .mouseup(function() {
+        //         cursor.css({
+        //             transform: "scale(1)"
+        //         });
+        //     });
 
         });
       }, []);
@@ -74,14 +74,14 @@ export default function Header(){
 
     return(
         <React.Fragment>
-            <div className="cursor"></div>
+            {/* <div className="cursor"></div> */}
             <div className="desktop__header header__wrapper">
                 <div className="header__wrap--inner">
                     <div className="header__left">
                         <div className="site__logo">
                             <Link href="/">
                                 <a className="logo__link">
-                                    <Image src="/images/IG-Logo.png" alt="Invertor Gate" width="240" height="80" />
+                                    <Image src="/images/Final-InvestorGate-Logo-Black.svg" alt="Invertor Gate"  layout="fill" quality={100} />
                                 </a>
                             </Link>
                         </div>
@@ -99,11 +99,11 @@ export default function Header(){
                                         <a className={router.pathname == "/servcies" ? "active" : ""}>Services</a>
                                     </Link>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <Link href="/">
                                         <a className={router.pathname == "/interviews" ? "active" : ""}>Interviews</a>
                                     </Link>
-                                </li>
+                                </li> */}
                                 <li>
                                     <Link href="/executives">
                                         <a className={router.pathname == "/executives" ? "active" : ""}>For Executives</a>
@@ -144,11 +144,11 @@ export default function Header(){
                                         <a className={router.pathname == "/servcies" ? "active" : ""}>Services</a>
                                     </Link>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <Link href="/">
                                         <a className={router.pathname == "/interviews" ? "active" : ""}>Interviews</a>
                                     </Link>
-                                </li>
+                                </li> */}
                                 <li>
                                     <Link href="/executives">
                                         <a className={router.pathname == "/executives" ? "active" : ""}>For Executives</a>

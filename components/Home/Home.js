@@ -30,20 +30,27 @@ export default function Home() {
             <Header />
 
             {/* Top Banner */}
-            <div className='style--banner banner--style-1' data-aos="fade-up">
+            <div className='style--banner banner--style-1'>
                 <Sitebanner 
                     bannerTitle="Qualitative insights on high-quality companies. Directly from executives."
                     bannerText1="As a leading provider of primary research, InvestorGate brings you interviews with executives from high-quality, public companies. We’re a trusted source of qualitative insights for investors and research professionals globally."
-                    bannerText2="For updates on all the latest interviews and analysis, subscribe to our newslette"
+                    bannerText2="For updates on all the latest interviews and analysis, subscribe to our newsletter"
                     bannerImage="/images/ipad3.png"
                     bannerButton="Subscribe"
                 />
-                <Logoslider />
+                <div className='slider__wrapper site__width'>
+                    <div className='banner__logo--slider'>
+                        <div className='slider__title'>
+                            <h5>With Executives From</h5>
+                        </div>
+                        <Logoslider />
+                    </div>
+                </div>
             </div>
 
 
             {/* Featured interviews */}
-            <div className='feed--section section' data-aos="fade-up">
+            <div className='feed--section section'>
                 <div className='section__wrapper site__width'>
                     <div className='section--hgroup hgroup'>
                         <div className='subtitle section--subtitle'>
@@ -54,10 +61,10 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className='feed--lists'>
+                    <div className='feed--lists' data-aos="fade-up" data-aos-duration="2000">
                         <FeedItems 
                             blogImg="/images/FI-1-1.jpg"
-                            feedLogo="/images/IG-User-Logo.png"
+                            feedLogo="/images/IG-User-Logo.jpg"
                             authorName="Investorgate"
                             feedDate="February 26, 2022"
                             cate1Link="https://coacherly.com/category/analysis/"
@@ -71,7 +78,7 @@ export default function Home() {
 
                         <FeedItems 
                             blogImg="/images/FI-2-1.jpg"
-                            feedLogo="/images/IG-User-Logo.png"
+                            feedLogo="/images/IG-User-Logo.jpg"
                             authorName="Investorgate"
                             feedDate="February 26, 2022"
                             cate1Link="https://coacherly.com/category/company-coverage/"
@@ -85,7 +92,7 @@ export default function Home() {
 
                         <FeedItems 
                             blogImg="/images/FI-3-1.jpg"
-                            feedLogo="/images/IG-User-Logo.png"
+                            feedLogo="/images/IG-User-Logo.jpg"
                             authorName="Investorgate"
                             feedDate="February 26, 2022"
                             cate1Link="https://coacherly.com/category/expert-networks/"
@@ -103,7 +110,7 @@ export default function Home() {
 
 
             {/* Why Use Us */}
-            <div className='style--banner banner--style-2' data-aos="fade-up">
+            <div className='style--banner banner--style-2'>
                 <div className='banner__wrapper'>
                     <div className='banner__content'>
                         <div className='section--hgroup hgroup'>
@@ -127,7 +134,7 @@ export default function Home() {
 
 
             {/* What We Do */}
-            <div className='infographic--section section' data-aos="fade-up">
+            <div className='infographic--section section'>
                 <div className='section__wrapper site__width'>
                     <div className='section--hgroup hgroup'>
                         <div className='section--subtitle subtitle'>
@@ -171,7 +178,7 @@ export default function Home() {
 
 
             {/* Executives section */}
-            <div className='two--column--section section has--bg' data-aos="fade-up">
+            <div className='two--column--section section has--bg'>
                 <div className='section__wrapper site__width'>
                     <div className='section--column__content'>
                         <div className='section--hgroup hgroup'>
@@ -214,7 +221,7 @@ export default function Home() {
 
 
             {/* Subscribe section */}
-            <div className='two--column--section section has--bg subscribe__bg' data-aos="fade-up">
+            <div className='two--column--section section has--bg subscribe__bg'>
                 <div className='section__wrapper site__width'>
                     <div className='section--column__content'>
                         <div className='section--hgroup hgroup'>
