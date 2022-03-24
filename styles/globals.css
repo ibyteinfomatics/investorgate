@@ -1002,12 +1002,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
     font-size: 1.25rem;
   }
 }
-@media screen and (min-width: 80rem){
+@media screen and (min-width: 79.9375rem){
   .site__width, .banner__wrapper{
     max-width: 73.75rem;
   }
 }
-@media screen and (min-width: 85.375rem){
+@media screen and (min-width: 85.5rem){
   .site__width, .banner__wrapper{
     max-width: 81.25rem;
   }
