@@ -144,6 +144,12 @@ body {
   height: 2.5rem;
   position: relative;
 }
+.site__logo:hover{
+  opacity: .65;
+  -webkit-transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+  -o-transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+  transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+}
 .site__logo a.logo__link{
   @apply block leading-none;
 }
@@ -165,6 +171,12 @@ body {
 }
 nav.site__navigation {
   @apply flex;
+}
+.site__navigation ul:hover{
+  opacity: 0.5;  
+  -webkit-transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+  -o-transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+  transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
 }
 .site__navigation ul li a {
   @apply flex items-center text-base font-medium;

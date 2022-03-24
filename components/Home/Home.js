@@ -13,7 +13,7 @@ import {
 
 import Sitebanner from '../Sitebanner/Sitebanner';
 import FeedItems from '../Feeds/FeedItems';
-import InfographicList from '../Servcies/ServciesList';
+import InfographicList from '../Services/ServicesList';
 
 
 export default function Home() {
