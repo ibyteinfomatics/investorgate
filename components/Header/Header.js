@@ -81,7 +81,7 @@ export default function Header(){
                         <div className="site__logo">
                             <Link href="/">
                                 <a className="logo__link">
-                                    <Image src="/images/Final-InvestorGate-Logo-Black.svg" alt="Invertor Gate"  layout="fill" quality={100} />
+                                    <Image src="/images/Final-InvestorGate-Logo-Black.svg" alt="Invertor Gate" layout="fill" quality={100} />
                                 </a>
                             </Link>
                         </div>

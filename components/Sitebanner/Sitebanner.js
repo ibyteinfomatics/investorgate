@@ -33,7 +33,7 @@ export default function Sitebanner(props){
             </div>
             {props.bannerImage &&
                 <div className='banner__right--image'>
-                    <Image src={props.bannerImage} alt="Home banner" width="308" height="401" />
+                    <Image src={props.bannerImage} alt="Home banner" layout="fill" quality={100} />
                 </div>
             }
         </div>
