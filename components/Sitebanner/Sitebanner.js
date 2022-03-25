@@ -11,11 +11,16 @@ export default function Sitebanner(props){
         <div className='banner__wrapper'>
             <div className='banner__content'>
                 <div className='banner__hgroup hgroup'>
-                    <div className='banner__title title'>
                     {props.bannerTitle &&
-                        <h3>{props.bannerTitle}</h3>
-                    }
+                    <div className='banner__subtitle subtitle'>
+                        <h3>{props.bannerSubtitle}</h3>
                     </div>
+                    }
+                    {props.bannerTitle &&
+                    <div className='banner__title title'>
+                        <h3>{props.bannerTitle}</h3>
+                    </div>
+                    }
                 </div>
                 <div className='banner__text'>
                     {props.bannerText1 &&

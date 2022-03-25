@@ -34,7 +34,7 @@ export default function Home() {
                 <Sitebanner 
                     bannerTitle="Qualitative insights on high-quality companies. Directly from executives."
                     bannerText1="As a leading provider of primary research, InvestorGate brings you interviews with executives from high-quality, public companies. We’re a trusted source of qualitative insights for investors and research professionals globally."
-                    bannerText2="For updates on all the latest interviews and analysis, subscribe to our newsletter"
+                    bannerText2="For updates on all the latest interviews and analysis, subscribe to our newsletter."
                     bannerImage="/images/ipad3.png"
                     bannerButton="Subscribe"
                 />

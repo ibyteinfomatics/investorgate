@@ -16,8 +16,10 @@ export default function Header(){
           $(window).scroll(function () {
             if ($(document).scrollTop() > 150) {
               $(".desktop__header").addClass("scrollSticky");
+              $("body").addClass("show--top--btn");
             } else {
               $(".desktop__header").removeClass("scrollSticky");
+              $("body").removeClass("show--top--btn");
             }
             if ($(document).scrollTop() > 300) {
               $(".desktop__header").addClass("addScroll");
