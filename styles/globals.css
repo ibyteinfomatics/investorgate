@@ -263,6 +263,16 @@ nav.site__navigation {
 .speech--banner{
   background-image: url(/images/speech--bubbles.jpg);
 }
+.executives--banner{
+  background-image: url(/images/experts.jpg);
+  padding-top: 8.564%;
+}
+.executives--banner:before{
+  background-color: transparent;
+}
+.executives--banner .banner__content{
+  margin-top: 0;
+}
 .servcies--banner:before{
   opacity: 0;
 }
@@ -456,8 +466,17 @@ p.meta--date,
 }
 
 /* Feed style -2 */
+.feed--section--style-2 .feed--lists{
+  column-gap: 1.25rem;
+  row-gap: 1.25rem;
+}
+.feed--section--style-2 .feed--items{
+  background-color: #f9f9f9;
+  padding: 2.1875rem;
+  border-radius: 0.4375rem;
+}
 .feed--section--style-2 .feed--hgroup {
-  padding-bottom: 1.25rem;
+  padding: 0 0 1.25rem 0;
 }
 p.meta--desc {
   margin: 0;
@@ -466,14 +485,16 @@ p.meta--desc {
   line-height: 1.65rem;
 }
 .feed--section--style-2 .feed--text--wrap {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0;
 }
 .feed--section--style-2 .feed--items--wrapper {
   background: none;
 }
 .feed--section--style-2 .feed--items--wrapper:hover {
   color: inherit;
+}
+.feed--section--style-2 .text--content{
+  margin-bottom: 0.625rem;
 }
 
 
@@ -710,9 +731,14 @@ ul.footerNav li a {
 .form--control {
   @apply w-full text-base;
   background-color: #f9f9f9;
-  border: 1px solid #818a91;
+  border: 0.0625rem solid #818a91;
   padding: 0.875rem 0.9375rem;
   border-radius: 0.4375rem;
+}
+.form--control:focus{
+  -webkit-box-shadow: 0 0 0 1px rgb(0 0 0 / 10%) inset;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 10%);
+  outline: none;
 }
 .contact__page .form--control{
   background-color: transparent;
@@ -953,21 +979,31 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 /* Accordian styling */
+.faqs--section.section.has--bg{
+  padding-top: 8vh;
+  padding-bottom: 7vh;
+}
 .accordian--list{
   margin-top: 1.25rem;
 }
+.accordian--list li{
+  margin-bottom: 0.625rem;
+}
 .accordian--list li .accor-head{
-  margin-top: 1.25rem;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 0.75rem;
+  background: #fff;
+  -webkit-border-radius: 0.3125rem;
+  border-radius: 0.3125rem;
   font-weight: 500;
   cursor: pointer;
 }
 .accordian--list li .accor-head p{
-  background-color: rgba(136, 136, 136, 0.05);
   width: 100%;
-  font-weight: 700;
-  min-height: 3.5rem;
+  font-weight: 800;
+  line-height: 1.3;
+  min-height: 3.375rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 1.05rem;
   padding: 0.9375rem 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -978,26 +1014,36 @@ Note: Beware of modifying this element as it can break the animations - you shou
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  -webkit-border-radius: 0.3125rem;
-  border-radius: 0.3125rem;
   -webkit-transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
   -o-transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
   transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
 }
 .accordian--list li .accor-head p:after{
   content: '+';
+  font-size: 1.5rem;
   position: absolute;
   right: 1.5rem;
   top: 50%;
   transform: translateY(-50%);
   transition: 0.5s;
+  font-weight: 400;
+  line-height: 1;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .accordian--list li .accor-head p.active:after{
   content: '-';
 }
+.accordian--list li .accor-head:hover p:after{
+  background: rgba(136, 136, 136, 0.05);
+  color: #c80700;
+} 
 .accordian--list .accor-data {
   margin-top: 0.25rem;
-  background: rgba(255, 255, 255, 0.95);
   border-radius: 0.75rem;
   color: #222;
   font-weight: 500;
@@ -1009,10 +1055,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
   transition: all .5s ease;
 }
 .accor-data p span{
-  font-weight: 600;
+  font-weight: 700;
 }
 .accor-data p a {
-  Font-weight: bold;	
+  font-weight: bold;	
+  color: #c80700;
+}
+.accor-data p a:hover {
+  color: #000;
 }
 .accordian--list .active--list .accor-data{
   height: fit-content;
@@ -1021,11 +1071,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding-bottom: 1.5rem;
 }
 .accor-data ol {
-  list-style: decimal;
+  list-style: disc;
   margin-left: 1em;
+  margin-bottom: 1.5rem;
 }
 .accor-data ol li {
-  margin-top: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  line-height: 1.75;
 }
 
 /* Banner logo wrapper without slider */
@@ -1197,7 +1250,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .contact__page .site__width,
   .services__page .banner__wrapper,
   .services__page .site__width,
-  .executives__page .banner__wrapper,
+  /* .executives__page .banner__wrapper, */
   .executives__page .site__width{
     @apply p-0;
   }
@@ -1251,4 +1304,86 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .react-multi-carousel-item > div > span{
   display: flex;
   align-items: center;
+}
+
+
+
+/* Executive Service Css */
+.section--column__content .banner__right--image{
+  @apply justify-center;
+}
+.executives__page .banner__logo--slider{
+  margin-top: 1.75rem;
+}
+.banner__logo--slider h6{
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+/* Benefits CSS */
+.testimonial{
+  @apply flex items-center;
+  background: #F9F9F9;
+  border-radius: 0.438rem;
+}
+.testimonial .clientImg{
+  padding: 0.625rem;
+  max-width: 17.794%;
+  @apply w-full;
+}
+.testimonial .clientImg img{
+  border-radius: 0.438rem;
+}
+.clientFeedback{
+  padding: 0.625rem;
+}
+.clientFeedback p{
+  font-size: 1.125rem;
+  line-height: 1.856rem;
+}
+
+/* Faq CSS */
+.has--bg--gray {
+  background: #f9f9f9;
+}
+.row-title {
+  background-color: #fff !important;
+  width: 100%;
+  font-weight: 700 !important;
+  min-height: 3.5rem !important;
+  padding: 0.9375rem 1.25rem !important;
+  display: block !important;
+  align-items: center;
+  position: relative !important;
+  border-radius: 0.3125rem !important;
+  transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s !important;
+  font-size: 1rem !important;
+}
+.styles_faq-row-wrapper__3vA1D .styles_faq-row__2YF3c{
+  border: none !important;
+}
+.styles_row-content-text__2sgAB.row-content-text {
+  padding: 20px !important;
+}
+span.icon-wrapper.styles_icon-wrapper__2cftw {
+  display: none !important;
+}
+.row-title.closed.styles_row-title__1YiiY.styles_closed__39w54.styles_no-tabfocus__1HmyD {
+  position: relative !important;
+}
+.row-title.expanded.styles_row-title__1YiiY.styles_expanded__3elPy.styles_no-tabfocus__1HmyD::after {
+  content: "-" !important;
+  right: 1.5rem !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  font-size: 1rem !important;
+}
+.row-title.closed.styles_row-title__1YiiY.styles_closed__39w54.styles_no-tabfocus__1HmyD::after{
+  content: "+" !important;
+  right: 1.5rem !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  font-size: 1rem !important;
 }
