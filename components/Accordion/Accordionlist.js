@@ -17,7 +17,7 @@ const AccordionList = ({idx, id, title, content}) => {
             <ul>
                 {
                     data.map((curElem,index) => {
-                        return <li id={curElem.id} className={show && curElem.id == active_id ? "const active--list" : "const"} data-activeid={active_id}>
+                        return <li key={curElem.id} id={curElem.id} className={show && curElem.id == active_id ? "const active--list" : "const"} data-activeid={active_id}>
                             <div className="accor-head">                            
                                 <p onClick={() => handleChange(curElem.id)} className={show && curElem.id == active_id ? "active" : ""}>
                                 {/* <span className="faq-count">{curElem.id}</span> */}
@@ -25,12 +25,12 @@ const AccordionList = ({idx, id, title, content}) => {
                             </div>
                             <div className="accor-data">
                                 <p dangerouslySetInnerHTML={{__html: curElem.listingData && curElem.content ? `<span>${curElem.content}</span>` : curElem.content}}></p>
-                                <ol>
-                                    {curElem.listingData && curElem.listingData.map((listing) => <li>{listing}</li>)}
+                                <ol key={1}>
+                                    {curElem.listingData && curElem.listingData.map((listing) => <li key={1}>{listing}</li>)}
                                 </ol>
                                 <p dangerouslySetInnerHTML={{__html: curElem.listingSubData && curElem.subcontent ? `<span>${curElem.subcontent}</span>` : curElem.subcontent}}></p>
-                                <ol>
-                                    {curElem.listingSubData && curElem.listingSubData.map((sublisting) => <li>{sublisting}</li>)}
+                                <ol key={2}>
+                                    {curElem.listingSubData && curElem.listingSubData.map((sublisting) => <li key={2}>{sublisting}</li>)}
                                 </ol>
                                 <p dangerouslySetInnerHTML={{__html: curElem.listingSubData && curElem.subcontent2 ? `<span>${curElem.subcontent2}</span>` : curElem.subcontent2}}></p>
                                 {curElem.subcontent3 && 
