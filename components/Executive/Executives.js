@@ -121,8 +121,8 @@ export default function Executives() {
                             </ul>
                         </div>
                     </div>
-                    <div className='section--column__content'>
-                        <div className='banner__right--image' data-aos="fade-up">
+                    <div className='section--column__content' data-aos="fade-up">
+                        <div className='banner__right--image'>
                             <Image src='/images/ipad3.png' alt='Benefits Image' width="500" height="651" />
                         </div>
                     </div>

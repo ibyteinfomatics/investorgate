@@ -267,6 +267,9 @@ nav.site__navigation {
   background-image: url(/images/experts.jpg);
   padding-top: 8.564%;
 }
+.executives--banner:before{
+  background-color: transparent;
+}
 .executives--banner .banner__content{
   margin-top: 0;
 }
