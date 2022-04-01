@@ -8,12 +8,13 @@ import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {
-    faLongArrowRight,
+    faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 
 import Sitebanner from '../Sitebanner/Sitebanner';
 import FeedItems from '../Feeds/FeedItems';
 import InfographicList from '../Services/ServicesList';
+import SectionHgroup from '../SectionHgroup/SectionHgroup';
 
 
 export default function Home() {
@@ -52,14 +53,10 @@ export default function Home() {
             {/* Featured interviews */}
             <div className='feed--section section'>
                 <div className='section__wrapper site__width'>
-                    <div className='section--hgroup hgroup'>
-                        <div className='subtitle section--subtitle'>
-                            <h3>Exclusive Content</h3>
-                        </div>
-                        <div className='section--title title'>
-                            <p>Featured articles</p>
-                        </div>
-                    </div>
+                    <SectionHgroup 
+                        sectionSubtitle="Exclusive Content"
+                        sectionTitle="Featured articles"
+                    />
 
                     <div className='feed--lists' data-aos="fade-up" data-aos-duration="2000">
                         <FeedItems 
@@ -113,19 +110,16 @@ export default function Home() {
             <div className='style--banner banner--style-2'>
                 <div className='banner__wrapper'>
                     <div className='banner__content'>
-                        <div className='section--hgroup hgroup'>
-                            <div className='section--subtitle subtitle'>
-                                <h3>Why Use us</h3>
-                            </div>
-                            <div className='section--title title'>
-                                <p>Fundamental, qualitative insights driving better decisions</p>
-                            </div>
-                        </div>
+                        <SectionHgroup 
+                            sectionSubtitle="Why Use us"
+                            sectionTitle="Fundamental, qualitative insights driving better decisions"
+                        />
+                        
                         <div className='banner__text'>
                             <p>InvestorGate’s purpose is to improve access to primary research and drive better investment decisions. That means giving you faster access to experts, more relevant insights, better idea generation and high-conviction investment theses.</p>
                             <p>Our company coverage is designed for the needs of our clients: fundamental investors with long time horizons and business ownership mindsets. Discover why some of the leading fund managers, research houses, retail investors and business schools use our platform for their primary research.</p>
                             <div className='banner__btn btn red--button'>
-                                <Link href="#"><a><span>Learn More</span> <FontAwesomeIcon icon={faLongArrowRight} /></a></Link>
+                                <Link href="#"><a><span>Learn More</span> <FontAwesomeIcon icon={faArrowRight} /></a></Link>
                             </div>
                         </div>
                     </div>
@@ -136,14 +130,13 @@ export default function Home() {
             {/* What We Do */}
             <div className='infographic--section section'>
                 <div className='section__wrapper site__width'>
-                    <div className='section--hgroup hgroup'>
-                        <div className='section--subtitle subtitle'>
-                            <h3>What we do</h3>
-                        </div>
-                        <div className='section--title title'>
-                            <p>Understand some of the <br />world’s leading companies</p>
-                        </div>
+                    <div className='section--small-width'>
+                        <SectionHgroup 
+                            sectionSubtitle="What we do"
+                            sectionTitle="Understand some of the world’s leading companies"
+                        />
                     </div>
+                    
                     <div className='section--content'>
                         <p>We organise and produce interviews with company executives to gain insights on the strategies, operating models, economic and cultural characteristics of high-quality companies.</p>
                         <p>Our primary research focuses on public companies listed on the major world stock markets with a tendency towards global mid-caps. We publish content in four formats:</p>
@@ -181,19 +174,16 @@ export default function Home() {
             <div className='two--column--section section has--bg'>
                 <div className='section__wrapper site__width'>
                     <div className='section--column__content'>
-                        <div className='section--hgroup hgroup'>
-                            <div className='subtitle section--subtitle'>
-                                <h3>For Executives</h3>
-                            </div>
-                            <div className='section--title title'>
-                                <p>Your expertise travels further than you</p>
-                            </div>
-                        </div>
+                        <SectionHgroup 
+                            sectionSubtitle="For Executives"
+                            sectionTitle="Your expertise travels further than you"
+                        />
+                        
                         <div className="section--content">
                             <p>We partner with experts like you for knowledge-sharing and networking opportunities.</p>
                             <p>If you’re an executive interested in building your profile, sharing your knowledge, and joining a fast-growing expert network, apply today to become part of our community.</p>
                             <div className='btn red--button'>
-                                <Link href="#"><a><span>Join Now</span> <FontAwesomeIcon icon={faLongArrowRight} /></a></Link>
+                                <Link href="#"><a><span>Join Now</span> <FontAwesomeIcon icon={faArrowRight} /></a></Link>
                             </div>
                         </div>
                     </div>
@@ -224,14 +214,10 @@ export default function Home() {
             <div className='two--column--section section has--bg subscribe__bg'>
                 <div className='section__wrapper site__width'>
                     <div className='section--column__content'>
-                        <div className='section--hgroup hgroup'>
-                            <div className='subtitle section--subtitle'>
-                                <h3>Subscribe</h3>
-                            </div>
-                            <div className='section--title title'>
-                                <p>Sign up for executive interviews, in-depth analysis and expert networking</p>
-                            </div>
-                        </div>
+                        <SectionHgroup 
+                            sectionSubtitle="Subscribe"
+                            sectionTitle="Sign up for executive interviews, in-depth analysis and expert networking"
+                        />
                     </div>
 
                     <div className='section--column__content'>
@@ -239,7 +225,7 @@ export default function Home() {
                             <p>Our team of dedicated analysts is consistently striving to bring you new ideas and content to enrich your investment decisions.</p>
                             <p>Sign up today for exclusive access to all InvestorGate content and services.</p>
                             <div className='btn red--button'>
-                                <Link href="#"><a><span>Subscribe</span> <FontAwesomeIcon icon={faLongArrowRight} /></a></Link>
+                                <Link href="#"><a><span>Subscribe</span> <FontAwesomeIcon icon={faArrowRight} /></a></Link>
                             </div>
                         </div>
                     </div>

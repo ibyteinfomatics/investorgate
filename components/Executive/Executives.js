@@ -170,7 +170,7 @@ export default function Executives() {
             </div>
 
             {/* Contact Form */}
-            <div className='form--section section' data-aos="fade-up">
+            <div className='form--section section'>
                 <div className='section__wrapper site__width'>
                     <div className='section--ex--small-width'>
                         <SectionHgroup 

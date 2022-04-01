@@ -1,16 +1,16 @@
 import React, {useEffect} from 'react';
-import Home from '../components/Home/Home';
+import Blog from '../components/Blog/Blog';
 
-export default function HomePage(){
+export default function BlogPage(){
     useEffect(() =>{
-        document.body.classList.add("home__page")
+        document.body.classList.add("blog__page")
         document.body.classList.remove("policy__page")
+        document.body.classList.remove("home__page")
         document.body.classList.remove("services__page")
         document.body.classList.remove("executives__page")
         document.body.classList.remove("contact__page")
-        document.body.classList.remove("blog__page")
     }, []);
     return(
-        <Home />
+        <Blog />
     )
 }

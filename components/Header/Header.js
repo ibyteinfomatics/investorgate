@@ -112,7 +112,7 @@ export default function Header(){
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/">
+                                    <Link href="/blog">
                                         <a className={router.pathname == "/blog" ? "active" : ""}>Blog</a>
                                     </Link>
                                 </li>

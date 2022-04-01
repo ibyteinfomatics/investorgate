@@ -159,7 +159,8 @@ body {
   transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
 }
 .site__logo a.logo__link{
-  @apply block leading-none;
+  @apply block leading-none my-2;
+  width: 7rem;
 }
 .desktop__header .site__logo img{
   @apply w-full;
@@ -229,7 +230,7 @@ nav.site__navigation {
 .style--banner{
   @apply px-5;
 }
-.services__page .style--banner, .contact__page .style--banner{
+.services__page .style--banner, .contact__page .style--banner, .blog__page .style--banner{
   min-height: 34.375rem;
   display: flex;
   align-items: center;
@@ -267,6 +268,10 @@ nav.site__navigation {
   background-image: url(/images/experts.jpg);
   padding-top: 8.564%;
 }
+.blog--banner{
+  background-image: url(/images/blog.jpg);
+}
+.blog--banner:before,
 .executives--banner:before{
   background-color: transparent;
 }
@@ -797,12 +802,17 @@ input[type="checkbox"] {
   width: 2rem;
   height: 1.5rem;
   left: 2.5%;
-  top: 2.3125rem;
+  top: 0.6rem;
 }
-
+.bm-burger-button > span{
+  @apply h-full;
+}
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: #373a47;
+}
+.bm-burger-bars:first-child{
+  @apply hidden;
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -1152,6 +1162,35 @@ Note: Beware of modifying this element as it can break the animations - you shou
   opacity: 1;
 }
 
+/* Policy Css Start */
+.innerTitle{
+  @apply font-bold text-base;
+}
+ul.terms li {
+  padding: 0.313rem 0;
+}
+.terms {
+  list-style: disc;
+  list-style-position: inside;
+}
+ol.terms {
+  list-style: none;
+}
+ol.terms li {
+  padding-left: 1rem;
+  position: relative;
+}
+ol.terms li:before {
+  content: '';
+  width: 0.75rem;
+  height: 0.0625rem;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /* Responsive styling */
 @media screen and (max-width: 47.999rem) {
   .desktop__header{
@@ -1161,6 +1200,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 @media screen and (min-width: 30rem){
   .logo__wrapper .banner__logo--lists ul{
     @apply grid__2;
+  }
+  .mobile__header .site__logo{
+    @apply ml-12;
+  }
+  .site__logo a.logo__link{
+    @apply w-auto my-0;
   }
 }
 @media screen and (min-width: 48rem){
@@ -1181,6 +1226,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
   .header__wrap--inner{
     padding-bottom: 4.4vh;
+    padding-top: 4.4vh;
     flex-wrap: wrap;
   }
   .banner__right--image {
@@ -1208,9 +1254,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .banner__content {
     max-width: 45.6rem;
   }
-  /* .banner__right--image img {
-    max-width: 61.113%;
-  } */
+  .blog__page .banner__content{
+    max-width: 47rem;
+  }
   .feed--lists{
     @apply grid__3;
   }
@@ -1231,6 +1277,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .header__wrap--inner{
     height: 14vh;
     padding-bottom: 0;
+    padding-top: 0;
   }
   .cursor {
     @apply block;
@@ -1250,7 +1297,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .contact__page .site__width,
   .services__page .banner__wrapper,
   .services__page .site__width,
-  /* .executives__page .banner__wrapper, */
+  .blog__page .banner__wrapper,
   .executives__page .site__width{
     @apply p-0;
   }
@@ -1345,45 +1392,4 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Faq CSS */
 .has--bg--gray {
   background: #f9f9f9;
-}
-.row-title {
-  background-color: #fff !important;
-  width: 100%;
-  font-weight: 700 !important;
-  min-height: 3.5rem !important;
-  padding: 0.9375rem 1.25rem !important;
-  display: block !important;
-  align-items: center;
-  position: relative !important;
-  border-radius: 0.3125rem !important;
-  transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s !important;
-  font-size: 1rem !important;
-}
-.styles_faq-row-wrapper__3vA1D .styles_faq-row__2YF3c{
-  border: none !important;
-}
-.styles_row-content-text__2sgAB.row-content-text {
-  padding: 20px !important;
-}
-span.icon-wrapper.styles_icon-wrapper__2cftw {
-  display: none !important;
-}
-.row-title.closed.styles_row-title__1YiiY.styles_closed__39w54.styles_no-tabfocus__1HmyD {
-  position: relative !important;
-}
-.row-title.expanded.styles_row-title__1YiiY.styles_expanded__3elPy.styles_no-tabfocus__1HmyD::after {
-  content: "-" !important;
-  right: 1.5rem !important;
-  position: absolute !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  font-size: 1rem !important;
-}
-.row-title.closed.styles_row-title__1YiiY.styles_closed__39w54.styles_no-tabfocus__1HmyD::after{
-  content: "+" !important;
-  right: 1.5rem !important;
-  position: absolute !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  font-size: 1rem !important;
 }
