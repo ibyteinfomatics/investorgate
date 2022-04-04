@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import CompliancePolicy from './components/policies/CompliancePolicy'
+import CompliancePolicy from '../components/Policies/CompliancePolicy';
 
 export default function CompliancePolicyProcess() {
   useEffect(() =>{
