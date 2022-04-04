@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 ::selection {
   background-color: #fcb3bf;
@@ -242,7 +243,7 @@ nav.site__navigation {
 .subscribe__bg:before{
   content: '';
   @apply inset-0 absolute;
-  background-color: #000;
+  background-color: transparent;
   background-image: linear-gradient(90deg, #000000 0%, #00000066 100%);
   opacity: 0.64;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
@@ -370,6 +371,9 @@ nav.site__navigation {
 }
 .subtitle.section--subtitle h3 {
   @apply small__text;
+}
+.subtitle.section--subtitle h3.cate__subtitle{
+  text-transform: none;
 }
 .services__page .subtitle.section--subtitle h3{
   color: #A4A3A6;
@@ -1163,6 +1167,16 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 /* Policy Css Start */
+.policy__page .section{
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  margin-top: 0;
+}
+.policy__page .title.section--title p{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-weight: 400;
+}
 .innerTitle{
   @apply font-bold text-base;
 }
@@ -1190,6 +1204,160 @@ ol.terms li:before {
   top: 50%;
   transform: translateY(-50%);
 }
+
+
+/* Category pages css */
+.category__page .section{
+  @apply my-0;
+  padding-top: 7.2vh;
+  padding-bottom: 7.2vh;
+}
+.title.section--title p.cate__title {
+  font-size: -webkit-calc(46px + 26 * ( (100vw - 576px) / 1024));
+  font-size: calc(46px + 26 * ( (100vw - 576px) / 1024));
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.subtitle.section--subtitle h3.cate__subtitle{
+  text-transform: none;
+  font-size: 1.0625rem;
+}
+
+.sidebar__grid {
+  padding-top: 8.8vh;
+  padding-bottom: 8.8vh;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: space-between;
+  row-gap: 3.125rem;
+}
+
+.pageSidebar.bg-gray {background-color: rgba(136, 136, 136, 0.05);
+  padding: 4.4vh;
+}
+
+h4.formTitle {
+  color: #000;
+  font-family: Montserrat,sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 0 0 0.625rem 0;
+  text-align: left;
+  word-break: break-word;
+}
+.sidebar_form--desc{
+  color: #000;
+  font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375em;
+}
+.sidebar_form form{
+  @apply mb-10;
+}
+.sidebar_form form input.form--control {
+  font-size: 0.875rem;
+  line-height: 1.5em;
+  padding: 0.625rem;
+  font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+  border-radius: 0.25rem;
+  border-color: #ccc;
+  background: #fff;
+}
+.sidebar_form form.cate__search--form input.form--control {
+  border-color: #949494;
+}
+.sidebar_form form .form--item.form--item--checkbox {
+  position: relative;
+  padding-left: 1.25rem;
+}
+.sidebar_form form .form--item.form--item--checkbox input[type="checkbox"]{
+  @apply absolute left-0;
+  top: 0.25rem;
+}
+.sidebar_form form .form--item.form--item--checkbox label{
+  color: #000;
+  display: block;
+  font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+  font-size: 0.75rem;
+  text-align: left;
+  margin-bottom: 0;
+  position: relative;
+}
+.sidebar_form form .form--actions button{
+  max-width: inherit;
+  margin-bottom: 1.25rem;
+}
+h4.sidebar--title {
+  font-size: -webkit-calc(19px + 1 * ( (100vw - 576px) / 1024));
+  font-size: calc(19px + 1 * ( (100vw - 576px) / 1024));
+  line-height: 1.3;
+  font-weight: 800;
+  margin-bottom: 3.4vh;
+}
+.cate__lists--block {
+  margin-bottom: 3.4vh;
+}
+.cate__lists li{
+  padding: 0.3125rem 0;
+}
+.cate__lists li a{
+  padding: 0.3125rem 0;
+  line-height: 1.65;
+}
+.cate__lists li.active--cate a{
+  font-weight: 600;
+}
+.cate__comment--block .sidebar--title{
+  margin: 0;
+}
+.cate__comment--block p.noCmnt{
+  margin: 0;
+}
+.category__page .feed--item--image{
+  @apply relative overflow-hidden opacity-100 w-full;
+  padding-bottom: 100%;
+  transition: none;
+  transform: none;
+}
+.category__page .feed--item--image img{
+  transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+}
+.category__page .feed--items--wrapper:hover .feed--item--image{
+  transform: none;
+}
+.category__page .feed--items--wrapper:hover .feed--item--image img{
+  transform: translateX(-50%) scale3d(1.1, 1.1, 1);
+}
+.category__page .feed--item--content{
+  position: unset;
+}
+.category__page .feed--hgroup{
+  @apply opacity-0 absolute top-0 left-0 right-0;
+  transition: 0.5s;
+}
+.category__page .feed--items--wrapper:hover .feed--hgroup{
+  @apply opacity-100;
+}
+.category__page .feed--text--wrap{
+  padding-top: 4.4ch;
+}
+.category__page .feed--items--wrapper:hover .feed--text--wrap{
+  color: #000;
+}
+.category__page .feed--items--wrapper .text--headline{
+  transition: .5s;
+}
+.category__page .feed--items--wrapper .text--headline:hover,
+.category__page .feed--items--wrapper:hover .text--headline{
+  color: #a90000;
+}
+.category__page .feed--items{
+  @apply main__grid;
+  column-gap: 2.5rem;
+  row-gap: 2.5rem;
+}
+
 
 /* Responsive styling */
 @media screen and (max-width: 47.999rem) {
@@ -1248,6 +1416,12 @@ ol.terms li:before {
   }
   .contact__page .form--actions button {
     max-width: 100%;
+  }
+  .sidebar__grid {
+    grid-template-columns: calc(25% - 50px) 75%;
+  }
+  .category__page .feed--items{
+    @apply grid__3;
   }
 }
 @media screen and (min-width: 60rem){
@@ -1328,6 +1502,12 @@ ol.terms li:before {
   .speech--banner .banner__title h3,
   .title.section--title p{
     @apply large__text--resposive;
+  }
+  .title.section--title p.cate__title {
+    font-size: 4.5rem;
+  }
+  h4.sidebar--title {
+    font-size: 1.25rem;
   }
 }
 @media screen and (min-width: 121rem){

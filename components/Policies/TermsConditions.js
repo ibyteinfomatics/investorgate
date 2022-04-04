@@ -10,7 +10,7 @@ export default function TermsConditions() {
             <div className='section'>
                 <div className='section__wrapper site__width'>
                     <SectionHgroup
-                        sectionTitle="Terms and Conditions of Use"
+                        policyTermsTitle="Terms and Conditions of Use"
                     />
                     <div className='text__body'>
                         <p className='innerTitle'>Summary</p>

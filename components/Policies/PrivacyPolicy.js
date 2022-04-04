@@ -13,7 +13,7 @@ export default function PrivacyPol() {
             <div className='section text--section'>
                 <div className='section__wrapper site__width'>
                     <SectionHgroup 
-                        sectionTitle="InvestorGate Ltd Privacy Policy"
+                        policyTermsTitle="InvestorGate Ltd Privacy Policy"
                     />
 
                     <div className='text__body'>

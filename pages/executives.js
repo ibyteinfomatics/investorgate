@@ -9,6 +9,7 @@ export default function ExecutivePage() {
         document.body.classList.remove("contact__page")
         document.body.classList.remove("services__page")
         document.body.classList.remove("blog__page")
+        document.body.classList.remove("category__page")
     }, []);
     return(
         <Executives />

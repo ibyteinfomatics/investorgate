@@ -9,14 +9,14 @@ export default function ContactForm() {
                     <div className='form--item'>
                         <div className='form--label'>
                             <label htmlFor="name">Name <span className='required'>*</span></label>
-                            <input className='form--control' id="name" placeholder='Name' type="text"></input>
                         </div>
+                        <input className='form--control' id="name" placeholder='Name' type="text"></input>
                     </div>
                     <div className='form--item'>
                         <div className='form--label'>
                             <label htmlFor="email">Email <span className='required'>*</span></label>
-                            <input className='form--control' id="email" placeholder='Emaail' type="email"></input>
                         </div>
+                        <input className='form--control' id="email" placeholder='Emaail' type="email"></input>
                     </div>
                 </div>
                 <div className='form--item form--item--textarea'>

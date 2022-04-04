@@ -9,6 +9,7 @@ export default function BlogPage(){
         document.body.classList.remove("services__page")
         document.body.classList.remove("executives__page")
         document.body.classList.remove("contact__page")
+        document.body.classList.remove("category__page")
     }, []);
     return(
         <Blog />
