@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import Analysis from '../../components/Category/Analysis'
+import Analysis from '../components/Category/Analysis';
 
 export default function AnalsisPage() {
   useEffect(() => {
@@ -11,5 +11,7 @@ export default function AnalsisPage() {
     document.body.classList.remove("executives__page")
     document.body.classList.remove("blog__page")
   },[]);
-  return <Analysis />
+  return(
+    <Analysis />
+  )
 }
