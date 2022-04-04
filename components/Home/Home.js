@@ -64,7 +64,7 @@ export default function Home() {
                             feedLogo="/images/IG-User-Logo.jpg"
                             authorName="Investorgate"
                             feedDate="February 26, 2022"
-                            cate1Link="/category/analysis/"
+                            cate1Link="/analysis/"
                             cate1="Analysis"
                             cate2Link="https://coacherly.com/category/freemium/"
                             cate2="Freemium"
