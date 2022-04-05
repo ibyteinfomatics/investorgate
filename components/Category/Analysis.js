@@ -1,5 +1,6 @@
 import React from 'react'
-import Sidebar from '../Sidebar/SIdebar'
+// import Sidebar from '../Sidebar/SIdebar'
+import Sidebar from '../Sidebar/Sidebar'
 import FeedItems from '../Feeds/FeedItems'
 import Header from '../Header/Header'
 import SectionHgroup from '../SectionHgroup/SectionHgroup'
