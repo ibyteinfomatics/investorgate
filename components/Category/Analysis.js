@@ -1,9 +1,9 @@
 import React from 'react'
-import Footer from '../../components/Footer/Footer'
-import Header from '../../components/Header/Header'
-import Sidebar from '../../components/Sidebar/SIdebar'
+import Sidebar from '../Sidebar/SIdebar'
 import FeedItems from '../Feeds/FeedItems'
+import Header from '../Header/Header'
 import SectionHgroup from '../SectionHgroup/SectionHgroup'
+import Footer from '../Footer/Footer'
 
 export default function Analysis() {
   return (
