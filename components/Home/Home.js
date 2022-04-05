@@ -33,7 +33,7 @@ export default function Home() {
             {/* Top Banner */}
             <div className='style--banner banner--style-1'>
                 <Sitebanner 
-                    bannerTitle="Qualitative insights on high-quality companies. Directly from executives."
+                    bannerTitle="Qualitative insights on high-quality companies. Expertly delivered."
                     bannerText1="As a leading provider of primary research, InvestorGate brings you interviews with executives from high-quality, public companies. We’re a trusted source of qualitative insights for investors and research professionals globally."
                     bannerText2="For updates on all the latest interviews and analysis, subscribe to our newsletter."
                     bannerImage="/images/ipad3.png"
@@ -49,6 +49,69 @@ export default function Home() {
                 </div>
             </div>
 
+
+            {/* What We Do */}
+            <div className='infographic--section section'>
+                <div className='section__wrapper site__width'>
+                    <div className='section--small-width'>
+                        <SectionHgroup 
+                            sectionSubtitle="What we do"
+                            sectionTitle="Understand some of the world’s leading companies"
+                        />
+                    </div>
+                    
+                    <div className='section--content'>
+                        <p>We produce interviews with executives to gain insights on the fundamental characteristics of high-quality companies. Our coverage centres on public companies listed on the world’s largest stock markets with a preference for global mid-caps.</p>
+                        <p>Interviewing executives provides arguably the best insight on the inner workings of companies; information that isn’t available in company filings or analyst reports. In the interviews we focus on four key company characteristics:</p>
+                    </div>
+                    <div className='infographic__list infographic__list--style-1' data-aos="fade-up" data-aos-duration="2000">
+                        <InfographicList 
+                            infoIcon="/images/message-icon.svg"
+                            infoTitle="Business Model & Competitive Advantages"
+                            infoContent="Analysing the full value chain of a company’s operations, its earnings power and durability of core competitive advantages"
+                        />
+
+                        <InfographicList 
+                            infoIcon="/images/multi-message-icon.svg"
+                            infoTitle="Unit Economics"
+                            infoContent="Breakdown of revenues and costs on a per unit basis, which enables a better understanding and analysis of gross margins"
+                        />
+
+                        <InfographicList 
+                            infoIcon="/images/share-icon.svg"
+                            infoTitle="Leadership & Culture"
+                            infoContent="Leadership, talent and culture factors are increasingly important in determining companies performance in today’s knowledge economy"
+                        />
+
+                        <InfographicList 
+                            infoIcon="/images/analysis-icon.svg"
+                            infoTitle="ESG Practices"
+                            infoContent="Improving sustainability and ESG practices are widely accepted as both beneficial to company stakeholders and a driver of long-term value creation"
+                        />
+                    </div>
+                </div>
+            </div>
+
+
+            {/* Why Use Us */}
+            <div className='style--banner banner--style-2'>
+                <div className='banner__wrapper'>
+                    <div className='banner__content'>
+                        <SectionHgroup 
+                            sectionSubtitle="Why Use us"
+                            sectionTitle="Fundamental, qualitative insights driving better decisions"
+                        />
+                        
+                        <div className='banner__text'>
+                            <p>InvestorGate’s purpose is to improve access to primary research and drive better investment decisions. That means giving you faster access to experts, increased idea generation, high-conviction investment theses and unrivalled ESG insights.</p>
+                            <p>Our company coverage is designed for the needs of our clients: fundamental investors with long time horizons and business ownership mindsets. Discover why some of the leading fund managers, research houses, retail investors and business schools use our platform for their primary research.</p>
+                            <div className='banner__btn btn red--button'>
+                                <Link href="#"><a><span>Learn More</span> <FontAwesomeIcon icon={faArrowRight} /></a></Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             {/* Featured interviews */}
             <div className='feed--section section'>
@@ -106,65 +169,22 @@ export default function Home() {
             </div>
 
 
-            {/* Why Use Us */}
-            <div className='style--banner banner--style-2'>
+            {/* Sustainability */}
+            <div className='style--banner banner--style-3'>
                 <div className='banner__wrapper'>
                     <div className='banner__content'>
                         <SectionHgroup 
-                            sectionSubtitle="Why Use us"
-                            sectionTitle="Fundamental, qualitative insights driving better decisions"
+                            sectionSubtitle="Sustainability"
+                            sectionTitle="Leading the ESG conversation"
                         />
                         
                         <div className='banner__text'>
-                            <p>InvestorGate’s purpose is to improve access to primary research and drive better investment decisions. That means giving you faster access to experts, more relevant insights, better idea generation and high-conviction investment theses.</p>
-                            <p>Our company coverage is designed for the needs of our clients: fundamental investors with long time horizons and business ownership mindsets. Discover why some of the leading fund managers, research houses, retail investors and business schools use our platform for their primary research.</p>
+                            <p>To meet the growing need for environmental, social and governance (ESG) research, we are leveraging our interview platform for conversations on all related topics from emissions to community relations to data security.</p>
+                            <p>For investors, ESG risk ratings alone are not enough; it’s vital to understand the views of corporate leaders on the most pressing sustainability issues.</p>
                             <div className='banner__btn btn red--button'>
-                                <Link href="#"><a><span>Learn More</span> <FontAwesomeIcon icon={faArrowRight} /></a></Link>
+                                <Link href="#"><a><span>Find Out More</span> <FontAwesomeIcon icon={faArrowRight} /></a></Link>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-
-            {/* What We Do */}
-            <div className='infographic--section section'>
-                <div className='section__wrapper site__width'>
-                    <div className='section--small-width'>
-                        <SectionHgroup 
-                            sectionSubtitle="What we do"
-                            sectionTitle="Understand some of the world’s leading companies"
-                        />
-                    </div>
-                    
-                    <div className='section--content'>
-                        <p>We organise and produce interviews with company executives to gain insights on the strategies, operating models, economic and cultural characteristics of high-quality companies.</p>
-                        <p>Our primary research focuses on public companies listed on the major world stock markets with a tendency towards global mid-caps. We publish content in four formats:</p>
-                    </div>
-                    <div className='infographic__list' data-aos="fade-up" data-aos-duration="2000">
-                        <InfographicList 
-                            infoIcon="/images/message-icon.svg"
-                            infoTitle="InvestorGate-Led Interviews"
-                            infoContent="InvestorGate Analysts host and publish interviews directly with executives."
-                        />
-
-                        <InfographicList 
-                            infoIcon="/images/multi-message-icon.svg"
-                            infoTitle="Investor-Led Interviews"
-                            infoContent="InvestorGate investment partners conduct interviews with experts and share with the community."
-                        />
-
-                        <InfographicList 
-                            infoIcon="/images/share-icon.svg"
-                            infoTitle="Industry Panel Interviews"
-                            infoContent="Panel of executives and industry experts hosted by an InvestorGate Analyst for broader discussion."
-                        />
-
-                        <InfographicList 
-                            infoIcon="/images/analysis-icon.svg"
-                            infoTitle="Post-Interview Analysis"
-                            infoContent="InvestorGate analysis report combining insights & perspectives from our various content features."
-                        />
                     </div>
                 </div>
             </div>

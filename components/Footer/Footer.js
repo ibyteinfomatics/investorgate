@@ -9,12 +9,13 @@ export default function Footer() {
                 <div className='section__wrapper site__width'>
                     <div className='divideFooter'>
                         <div className='footerCol'>
-                            <div className='footerLogo'>
-                                <Link href="/"><a><Image src='/images/Final-InvestorGate-Logo-White.svg' alt='Footer Logo' layout="fill" quality={100} /></a></Link>
-                            </div>
+                            <h3 className="title widget-title">About</h3>
                             <p>
                                 InvestorGate is a leading provider of primary research, bringing you interviews with executives from high-quality companies.
                             </p>
+                            <div className='footerLogo'>
+                                <Link href="/"><a><Image src='/images/Final-InvestorGate-Logo-White.svg' alt='Footer Logo' layout="fill" quality={100} /></a></Link>
+                            </div>
                         </div>
                         <div className='footerCol'>
                             <h3 className="title widget-title">Location</h3>

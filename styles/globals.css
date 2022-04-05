@@ -248,6 +248,9 @@ nav.site__navigation {
   opacity: 0.64;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
+.home__page .style--banner:before{
+  opacity: 0;
+}
 .banner--style-1{
   background-image: url(/images/home-banner.jpg);
   padding: 4.5% 0% 0.5% 0%;
@@ -256,15 +259,18 @@ nav.site__navigation {
 .banner--style-2{
   background-image: url(/images/exclusive--banner.jpg);
 }
+.banner--style-3{
+  background-image: url(/images/IG3--banner.jpg);
+}
 .servcies--banner{
   background-image: url(/images/servcies-banner.jpg);
 }
 .contact--banner{
   background-image: url(/images/contact-banner.jpg);
 }
-.speech--banner{
+/* .speech--banner{
   background-image: url(/images/speech--bubbles.jpg);
-}
+} */
 .executives--banner{
   background-image: url(/images/experts.jpg);
   padding-top: 8.564%;
@@ -303,9 +309,6 @@ nav.site__navigation {
 }
 .banner__title {
   @apply mb-5 mt-5;
-}
-.servcies--banner .banner__title{
-  max-width: 30rem;
 }
 .banner__title h3 {
   font-weight: 700;
@@ -528,8 +531,16 @@ p.meta--desc {
 .infographic__title {
   margin: 0.325rem 0;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: -webkit-calc(19px + 1 * ( (100vw - 576px) / 1024));
+  font-size: calc(19px + 1 * ( (100vw - 576px) / 1024));
   letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+.infographic__list--style-1 .infographic__title{
+  max-width: 8rem;
+}
+.infographic__list--style-1 .infographic__list--item:first-child .infographic__title{
+  max-width: 100%;
 }
 .services__page .infographic__title{
   @apply lg--text;
@@ -605,12 +616,12 @@ p.author-desi {
 
 /* Subscribe */
 .subscribe__bg{
-  background-image: url(/images/oh__img147.jpg);
+  background-image: url(/images/servcies-banner.jpg);
   @apply text-white bg-center;
 }
 .subscribe__bg:before{
   background: #000;
-  opacity: 0.7;
+  opacity: 0.56;
 }
 .subscribe__bg .section__wrapper{
   @apply relative;
@@ -668,9 +679,8 @@ a:hover{
 .footerCol p {
   font-size: 1rem;
   font-weight: 400;
-  margin: 0;
-  padding-top: 3.4vh;
-  padding-bottom: 0.3125rem;
+  margin: 0 0 0.3125rem;
+  padding-bottom: 3.4vh;
   color: rgba(255,255,255,0.8);
 }
 .title.widget-title {
@@ -934,7 +944,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /*content list */
 .mt-3vh{
-  margin-top: 4vh;
+  margin-top: 5vh;
 }
 .content--list{
   padding-top: 0.625rem;
@@ -950,7 +960,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .content--list li:before{
   content: '';
   width: 0.5rem;
-  margin-right: 1rem;
+  margin-right: 0.875rem;
+  margin-left: 0.125rem;
+  margin-top: -0.25rem;
   height: 0.875rem;
   display: block;
   border: solid #c80700;
@@ -1097,11 +1109,18 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Banner logo wrapper without slider */
 .services__page .style--banner.speech--banner{
-  @apply block;
+  @apply block text-black;
   padding-top: 3.5%;
+  background-color: #f9f9f9;
+}
+.services__page .style--banner.speech--banner:before{
+  @apply hidden;
 }
 .speech--banner .banner__title h3{
-  @apply large__text;
+  @apply large__text section--small-width;
+}
+.speech--banner .banner__subtitle {
+  @apply text-black;
 }
 .logo__wrapper .banner__logo--lists ul{
   @apply main__grid pb-5;
@@ -1121,6 +1140,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 .services__page .style--banner.speech--banner .banner__content {
   margin-top: 0;
+  max-width: 100%;
 }
 .services__page .style--banner.speech--banner .banner__wrapper {
   padding-top: 0;
@@ -1380,6 +1400,12 @@ h4.sidebar--title {
   .banner__wrapper{
     @apply banner__grid-lg;
   }
+  .services__page .banner__wrapper{
+    @apply main__grid;
+  }
+  .services__page .banner__content{
+    max-width: 49.5rem;
+  }
   .infographic--section .section--content{
     max-width: 88.076%;
   }
@@ -1460,7 +1486,8 @@ h4.sidebar--title {
     font-size: 1.25rem;
   }
   .banner__right--image > span{
-    max-width: 57% !important;
+    max-width: 58.5% !important;
+    height: 25.625rem !important;
   }
   .banner__logo--slider {
     margin-top: 3.25rem;
@@ -1494,6 +1521,9 @@ h4.sidebar--title {
 @media screen and (min-width: 100rem){
   .banner__title h3 {
     font-size: 3.375rem;
+  }
+  .infographic__title{
+    font-size: 1.25rem;
   }
   .text--headline,
   .services__page .infographic__title{

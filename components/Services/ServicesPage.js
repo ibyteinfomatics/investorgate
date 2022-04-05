@@ -28,7 +28,7 @@ export default function ServicesPage() {
             {/* Top Banner */}
             <div className='style--banner servcies--banner'>
                 <Sitebanner 
-                    bannerTitle="Leading the democratization of expert insights"
+                    bannerTitle="Improving executive access for the investment industry"
                     bannerText1="At InvestorGate, we understand the critical role primary research plays in understanding companies and building investment cases. That’s why we’re driving change in the expert network industry and increasing the accessibility of expert insights."
                     bannerButton="Contact Us"
                 />
@@ -44,8 +44,8 @@ export default function ServicesPage() {
                             sectionTitle="Exclusive insights into the world’s leading companies"
                         />
                         <div className="section--content">
-                            <p>InvestorGate is a digital content platform for the investment, corporate and education sectors. Our dual purpose is to create a better-connected industry and expanding the reach of expert insights to new audiences globally.</p>
-                            <p>We publish interviews with industry executives for our community to learn and understand the strategies, operating models, economic and cultural characteristics of high-quality companies.</p>
+                            <p>InvestorGate has a dual purpose of creating a better-connected industry and expanding the reach of expert insights. We partner with fundamental, long term investors and bottom-up stock pickers to facilitate deeper qualitative insights as part of their research process.</p>
+                            <p>We publish interviews with industry executives for our community to better understand the business models, competitive advantages, unit economics, cultural attributes and ESG practices of high-quality companies.</p>
                         </div>
                     </div>
 
@@ -53,9 +53,10 @@ export default function ServicesPage() {
                         <div className='section--content mt-3vh'>
                             <p>For investors, we offer the tools to improve your primary research and investment decision-making process.</p>
                             <ul className='content--list'>
-                                <li>Exclusive expert interviews via our on-demand platform</li>
+                                <li>Expert interviews via our on-demand platform</li>
                                 <li>High-quality global mid-caps for increased idea flow</li>
                                 <li>Trusted, qualitative insights for high conviction decisions</li>
+                                <li>ESG investment analysis and insights</li>
                                 <li>Access to the most relevant experts through custom-sourcing</li>
                                 <li>Calls with experts at a fraction of the cost of traditional networks</li>
                                 <li>Best-in-class client experience</li>
@@ -78,26 +79,26 @@ export default function ServicesPage() {
                     <div className='infographic__list'>
                         <InfographicList
                             infoIcon="/images/message-icon.svg"
-                            infoTitle="InvestorGate-led Interviews"
-                            infoContent="As part of our commitment to ‘original content’, InvestorGate Analysts host and publish interviews with executives. These are usually in a structured, hour-long format with accessible and consumable insights for our members to watch, listen or read."
+                            infoTitle="InvestorGate Interviews"
+                            infoContent="As part of our commitment to ‘original content’, InvestorGate Analysts host and publish interviews with executives. These are structured, hour-long interviews with accessible and consumable insights for our members to watch, listen or read."
                         />
 
                         <InfographicList 
                             infoIcon="/images/multi-message-icon.svg"
                             infoTitle="Investor-led Interviews"
-                            infoContent="InvestorGate organises executive interviews which are led by our investor clients. Conversations are recorded, edited and posted to the site. InvestorGate provides technical support and guidance but is not involved in the interview itself. This format lends itself to investors asking their most burning questions about a company and hearing directly from the executive."
+                            infoContent="InvestorGate organises executive interviews which are led by our clients, professional investors. Conversations are recorded, edited and posted to the site. InvestorGate provides support but leaves the questions exclusively to the discretion of investors."
                         />
 
                         <InfographicList 
                             infoIcon="/images/text-message-icon.svg"
-                            infoTitle="Industry Panel Forums"
-                            infoContent="From time to time InvestorGate will bring together three to four industry experts and host a panel interview session. We will ask our members to submit questions in advance and an InvestorGate Analyst will relay these questions to the panel. Discussion points will include industry trends and disruptive forces, company-specific issues, government policy and regulation, and other relevant industry topics."
+                            infoTitle="Industry Panels"
+                            infoContent="From time to time InvestorGate brings together three to four industry experts and host a panel interview session. We will ask our members to submit questions in advance and an InvestorGate Analyst will relay these questions to the panel. Discussion points will include industry trends and disruptive forces, ESG and sustainability, government policy and regulation, and other relevant industry topics."
                         />
 
                         <InfographicList 
                             infoIcon="/images/analysis-icon.svg"
                             infoTitle="Post-Interview Analysis"
-                            infoContent="InvestorGate produces independent analysis published exclusively for the site, providing a summary of key takeaways and weighing the various perspectives of experts featured in the interviews. The analysis is qualitative in nature and while we tend to avoid detailed financial modeling, we often refer to company financial statements and economic ratios to support our analysis. We aim to take a well-balanced view, evaluating both the bull and bear cases, and attempt to reduce biases as much as possible."
+                            infoContent="InvestorGate produces independent analysis published exclusively for the site, providing a summary of key takeaways and weighing the various expert opinions shared during the interviews. While we leave the detailed financial analysis and modelling to others, we still use fundamentals to support our qualitative insights. We aim to take a well-balanced neutral view on each company, evaluating both the bull and bear cases and reducing biases where possible."
                         />
                     </div>
                 </div>
