@@ -38,6 +38,7 @@ export default function Home() {
                     bannerText2="For updates on all the latest interviews and analysis, subscribe to our newsletter."
                     bannerImage="/images/ipad3.png"
                     bannerButton="Subscribe"
+                    bannerButtonLink="/subscribe"
                 />
                 <div className='slider__wrapper site__width'>
                     <div className='banner__logo--slider'>
@@ -106,7 +107,7 @@ export default function Home() {
                             <p>InvestorGate’s purpose is to improve access to primary research and drive better investment decisions. That means giving you faster access to experts, increased idea generation, high-conviction investment theses and unrivalled ESG insights.</p>
                             <p>Our company coverage is designed for the needs of our clients: fundamental investors with long time horizons and business ownership mindsets. Discover why some of the leading fund managers, research houses, retail investors and business schools use our platform for their primary research.</p>
                             <div className='banner__btn btn red--button'>
-                                <Link href="#"><a><span>Learn More</span> <FontAwesomeIcon icon={faArrowRight} /></a></Link>
+                                <Link href="/executives"><a><span>Learn More</span> <FontAwesomeIcon icon={faArrowRight} /></a></Link>
                             </div>
                         </div>
                     </div>
@@ -123,15 +124,29 @@ export default function Home() {
 
                     <div className='feed--lists' data-aos="fade-up" data-aos-duration="2000">
                         <FeedItems 
+                            blogImg="/images/ESG-feed.jpg"
+                            feedLogo="/images/IG-User-Logo.jpg"
+                            authorName="Investorgate"
+                            feedDate="April 7, 2022"
+                            cate1Link="/esg/"
+                            cate1="ESG"
+                            cate2Link="/freemium/"
+                            cate2="Freemium"
+                            headlineLink="/post-esg"
+                            headline="ESG In Focus: 9 Questions Investors Should Ask CEOs about ESG"
+                            feedText="ESG transformation is increasingly seen by investors as..."
+                        />
+
+                        <FeedItems 
                             blogImg="/images/FI-1-1.jpg"
                             feedLogo="/images/IG-User-Logo.jpg"
                             authorName="Investorgate"
                             feedDate="February 26, 2022"
                             cate1Link="/analysis/"
                             cate1="Analysis"
-                            cate2Link="https://coacherly.com/category/freemium/"
+                            cate2Link="/freemium/"
                             cate2="Freemium"
-                            headlineLink="https://coacherly.com/analysis-constellation-vitec-and-vmss-impeccable-match-for-serial-acquirers/"
+                            headlineLink="https://investorgate.co/analysis-constellation-vitec-and-vmss-impeccable-match-for-serial-acquirers/"
                             headline="Analysis: Constellation, Vitec, and VMS’s Impeccable Match for Serial Acquirers"
                             feedText="Mark Leonard, the CEO of Constellation Software, famously..."
                         />
@@ -141,28 +156,28 @@ export default function Home() {
                             feedLogo="/images/IG-User-Logo.jpg"
                             authorName="Investorgate"
                             feedDate="February 26, 2022"
-                            cate1Link="https://coacherly.com/category/company-coverage/"
+                            cate1Link="/company-coverage/"
                             cate1="Company Coverage"
-                            cate2Link="https://coacherly.com/category/freemium/"
+                            cate2Link="/freemium/"
                             cate2="Freemium"
-                            headlineLink="https://coacherly.com/company-coverage-what-type-of-companies-make-the-cut/"
+                            headlineLink="https://investorgate.co/company-coverage-what-type-of-companies-make-the-cut/"
                             headline="Company Coverage: What type of companies make the cut?"
                             feedText="Our company coverage focuses squarely on high-quality companies..."
                         />
 
-                        <FeedItems 
+                        {/* <FeedItems 
                             blogImg="/images/FI-3-1.jpg"
                             feedLogo="/images/IG-User-Logo.jpg"
                             authorName="Investorgate"
                             feedDate="February 26, 2022"
-                            cate1Link="https://coacherly.com/category/expert-networks/"
+                            cate1Link="/expert-networks/"
                             cate1="Expert networks"
-                            cate2Link="https://coacherly.com/category/freemium/"
+                            cate2Link="/freemium/"
                             cate2="Freemium"
-                            headlineLink="https://coacherly.com/couche-tard-the-impact-of-electric-vehicles/"
+                            headlineLink="https://investorgate.co/couche-tard-the-impact-of-electric-vehicles/"
                             headline="Expert Networks: What’s next for the industry?"
                             feedText="I’ve always worked for media agencies, across my..."
-                        />
+                        /> */}
                     </div>
                     
                 </div>

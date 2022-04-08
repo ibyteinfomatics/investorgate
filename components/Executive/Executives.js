@@ -32,6 +32,7 @@ export default function Executives() {
                     bannerTitle="Get rewarded for your knowledge and expertise"
                     bannerText1="Use the InvestorGate platform to spread the word, share your insights, and connect with like-minded business and investment professionals."
                     bannerButton="Join Today"
+                    bannerButtonLink="#"
                 />
                 <div className='slider__wrapper site__width'>
                     <div className='banner__logo--slider'>
@@ -123,7 +124,7 @@ export default function Executives() {
                     </div>
                     <div className='section--column__content' data-aos="fade-up">
                         <div className='banner__right--image'>
-                            <Image src='/images/ipad3.png' alt='Benefits Image' width="500" height="651" />
+                            <Image src='/images/ipad3.png' alt='Benefits Image' layout="fill" quality={100} />
                         </div>
                     </div>
                 </div>

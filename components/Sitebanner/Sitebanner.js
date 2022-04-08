@@ -31,15 +31,18 @@ export default function Sitebanner(props){
                     }
                     {props.bannerButton &&
                     <div className='banner__btn btn red--button'>
-                        <Link href="#"><a><span>{props.bannerButton}</span> <FontAwesomeIcon icon={faArrowRight} /></a></Link>
+                        {props.bannerButtonLink ?
+                        <Link href={props.bannerButtonLink}><a><span>{props.bannerButton}</span> <FontAwesomeIcon icon={faArrowRight} /></a></Link>
+                        : <Link href="#"><a><span>{props.bannerButton}</span> <FontAwesomeIcon icon={faArrowRight} /></a></Link>
+                        }
                     </div>
                     }
                 </div>
             </div>
             {props.bannerImage &&
-                <div className='banner__right--image' data-aos='fade-in'>
-                    <Image src={props.bannerImage} alt="Home banner" layout="fill" quality={100} />
-                </div>
+            <div className='banner__right--image' data-aos='fade-in'>
+                <Image src={props.bannerImage} alt="Home banner" layout="fill" quality={100} />
+            </div>
             }
         </div>
     )

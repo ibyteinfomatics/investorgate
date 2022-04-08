@@ -147,26 +147,26 @@ export default function ServicesPage() {
                 <div className='logo__wrapper site__width'>
                     <div className='banner__logo--lists'>
                         <ul>
-                            <li>
-                                <Link href="#"><a>
+                            {/* <li>
+                                <Link href="https://www.nottingham.ac.uk/"><a target="_blank">
                                     <Image src="/images/un--logo.png" alt="Banner Logo" layout="fill" quality={100} />
                                 </a></Link>
                             </li>
                             <li>
-                                <Link href="#"><a>
+                                <Link href="https://bond.edu.au/"><a target="_blank">
                                     <Image src="/images/bu--logo.png" alt="Banner Logo" layout="fill" quality={100} />
                                 </a></Link>
                             </li>
                             <li>
-                                <Link href="#"><a>
+                                <Link href="https://www.hec.edu/en/mba-programs/executive-mba"><a target="_blank">
                                     <Image src="/images/hec--logo.png" alt="Banner Logo" layout="fill" quality={100} />
                                 </a></Link>
                             </li>
                             <li>
-                                <Link href="#"><a>
+                                <Link href="https://www.aston.ac.uk/bss/aston-business-school"><a target="_blank">
                                     <Image src="/images/abs--logo.png" alt="Banner Logo" layout="fill" quality={100} />
                                 </a></Link>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>

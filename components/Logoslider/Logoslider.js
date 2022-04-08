@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
@@ -30,35 +31,75 @@ export default function Logoslider () {
                 containerClass="carousel-container"
                 removeArrowOnDeviceType={["tablet", "mobile"]} >
                     <div>
-                        <Image width="150" height="62" src="/images/seek-logo.png" alt="image1" />    
+                        <Link href="https://www.seek.com.au/">
+                            <a target="_blank">
+                                <Image width="150" height="62" src="/images/seek-logo.png" alt="image1" />    
+                            </a>
+                        </Link>
                     </div>
                     <div>
-                        <Image width="150" height="62" src="/images/fujtsu-logo.png" alt="image2" />    
+                        <Link href="https://www.fujitsu.com/global/">
+                            <a target="_blank">
+                                <Image width="150" height="62" src="/images/fujtsu-logo.png" alt="image2" />    
+                            </a>
+                        </Link>  
                     </div>
                     <div>
-                        <Image width="150" height="62" src="/images/marsh-logo.png" alt="image3" />    
+                        <Link href="https://www.marshmclennan.com/">
+                            <a target="_blank">
+                                <Image width="150" height="62" src="/images/marsh-logo.png" alt="image3" />      
+                            </a>
+                        </Link>
                     </div>
                     <div>
-                        <Image width="150" height="62" src="/images/smatrics-logo.png" alt="image4" />    
+                        {/* <Link href="">
+                            <a target="_blank"> */}
+                                <Image width="150" height="62" src="/images/smatrics-logo.png" alt="image4" />     
+                            {/* </a>
+                        </Link>  */}
                     </div>
                     <div>
-                        <Image width="150" height="62" src="/images/datum360-logo.png" alt="image5" />    
+                        {/* <Link href="">
+                            <a target="_blank"> */}
+                                <Image width="150" height="62" src="/images/datum360-logo.png" alt="image5" />     
+                            {/* </a>
+                        </Link>  */}
+                    </div>
+                    {/* <div>
+                        <Link href="">
+                            <a target="_blank">
+                                <Image width="150" height="62" src="/images/datum360-logo.png" alt="image5" />     
+                            </a>
+                        </Link> 
                     </div>
                     <div>
-                        <Image width="150" height="62" src="/images/datum360-logo.png" alt="image5" />    
+                        <Link href="">
+                            <a target="_blank">
+                                <Image width="150" height="62" src="/images/fujtsu-logo.png" alt="image4" />      
+                            </a>
+                        </Link>
                     </div>
                     <div>
-                        <Image width="150" height="62" src="/images/fujtsu-logo.png" alt="image4" />    
+                        <Link href="">
+                            <a target="_blank">
+                                <Image width="150" height="62" src="/images/marsh-logo.png" alt="image3" />      
+                            </a>
+                        </Link>
                     </div>
                     <div>
-                        <Image width="150" height="62" src="/images/marsh-logo.png" alt="image3" />    
+                        <Link href="">
+                            <a target="_blank">
+                                <Image width="150" height="62" src="/images/evelved-logo.png" alt="image2" />      
+                            </a>
+                        </Link>
                     </div>
                     <div>
-                        <Image width="150" height="62" src="/images/evelved-logo.png" alt="image2" />    
-                    </div>
-                    <div>
-                        <Image width="150" height="62" src="/images/seek-logo.png" alt="image1"/>    
-                    </div>
+                        <Link href="">
+                            <a target="_blank">
+                                <Image width="150" height="62" src="/images/seek-logo.png" alt="image1"/>      
+                            </a>
+                        </Link>
+                    </div> */}
                 </Carousel>
             </div>
         </React.Fragment>

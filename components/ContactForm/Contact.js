@@ -16,7 +16,7 @@ export default function ContactForm() {
                         <div className='form--label'>
                             <label htmlFor="email">Email <span className='required'>*</span></label>
                         </div>
-                        <input className='form--control' id="email" placeholder='Emaail' type="email"></input>
+                        <input className='form--control' id="email" placeholder='Email' type="email"></input>
                     </div>
                 </div>
                 <div className='form--item form--item--textarea'>

@@ -10,6 +10,8 @@ export default function PrivacyPolicy() {
     document.body.classList.remove("executives__page")
     document.body.classList.remove("blog__page")
     document.body.classList.remove("category__page")
+    document.body.classList.remove("posts__page")
+    document.body.classList.remove("subscribe__page")
   },[]);
   return (
     <PrivacyPol />

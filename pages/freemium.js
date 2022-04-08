@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
-import Analysis from '../components/Category/Analysis';
+import Freemium from '../components/Category/Freemium';
 
-export default function AnalsisPage() {
+export default function FreemiumPage() {
   useEffect(() => {
     document.body.classList.add("category__page")
     document.body.classList.remove("contact__page")
@@ -14,6 +14,6 @@ export default function AnalsisPage() {
     document.body.classList.remove("subscribe__page")
   },[]);
   return(
-    <Analysis />
+    <Freemium />
   )
 }
