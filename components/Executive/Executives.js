@@ -124,7 +124,7 @@ export default function Executives() {
                     </div>
                     <div className='section--column__content' data-aos="fade-up">
                         <div className='banner__right--image'>
-                            <Image src='/images/ipad3.png' alt='Benefits Image' layout="fill" quality={100} />
+                            <Image src='/images/ipad3.png' alt='Benefits Image' layout="responsive" width={317} height={410} />
                         </div>
                     </div>
                 </div>

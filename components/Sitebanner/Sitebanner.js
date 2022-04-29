@@ -41,7 +41,7 @@ export default function Sitebanner(props){
             </div>
             {props.bannerImage &&
             <div className='banner__right--image' data-aos='fade-in'>
-                <Image src={props.bannerImage} alt="Home banner" layout="fill" quality={100} />
+                <Image src={props.bannerImage} alt="Home banner" layout="responsive" width={317} height={410} />
             </div>
             }
         </div>
